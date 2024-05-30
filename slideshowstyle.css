@@ -206,7 +206,7 @@ main > article > .article-nav-section {
 }
 
 main > article:first-child > .article-image-section {
-    background-image: url("Images/Dissertation/Kitchen1.png");
+    background-image: url("Images/Dissertation/Kitchen1.jpg");
 }
 
 main > article:nth-child(2) > .article-image-section {
@@ -214,28 +214,28 @@ main > article:nth-child(2) > .article-image-section {
 }
 
 main > article:nth-child(3) > .article-image-section {
-    background-image: url("Images/LabRemake/ArnoldConcept_001.png");
+    background-image: url("Images/LabRemake/ArnoldConcept_001.jpg");
 }
 
 
 main > article:nth-child(4) > .article-image-section {
-    background-image: url("Images/NeonCity/Still_015.png");
+    background-image: url("Images/NeonCity/Still_015.jpg");
 }
 
 main > article:nth-child(5) > .article-image-section {
-    background-image: url("Images/CabinFeverFolder/Dorm.png");
+    background-image: url("Images/CabinFeverFolder/Dorm.jpg");
 }
 
 main > article:nth-child(6) > .article-image-section {
-    background-image: url("Images/RPD/RPD.png");
+    background-image: url("Images/RPD/RPD.jpg");
 }
 
 main > article:nth-child(7) > .article-image-section {
-    background-image: url("Images/Saw/Saw_Imager_001.png");
+    background-image: url("Images/Saw/Saw_Imager_001.jpg");
 }
 
 main > article:nth-child(8) > .article-image-section {
-    background-image: url("Images/AsymmetricalHorror/VR-Y4-001_09.png");
+    background-image: url("Images/AsymmetricalHorror/VR-Y4-001_09.jpg");
 }
 
 main > article:nth-child(9) > .article-image-section {
@@ -243,11 +243,11 @@ main > article:nth-child(9) > .article-image-section {
 }
 
 main > article:nth-child(10) > .article-image-section {
-    background-image: url("Images/Penguino/PenguinTest_004.png");
+    background-image: url("Images/Penguino/PenguinTest_004.jpg");
 }
 
 main > article:nth-child(11) > .article-image-section {
-    background-image: url("Images/ThreeJS/Homepage_001.png");
+    background-image: url("Images/ThreeJS/Homepage_001.jpg");
 }
 
 main > article > .article-image-section {
@@ -711,50 +711,6 @@ main > article > .article-nav-section {
 main > article > .article-title-section,
 main > article > .article-nav-section {
     border-top: 1px solid var(--border-color);
-}
-
-main > article:first-child > .article-image-section {
-    background-image: url("Images/Dissertation/Kitchen1.png");
-}
-
-main > article:nth-child(2) > .article-image-section {
-    background-image: url("Images/Lab/LabRender_004.jpg");
-}
-
-/* main > article:nth-child(3) > .article-image-section {
-    background-image: url("Images/LabRemake/ArnoldConcept_001.png");
-} */
-
-main > article:nth-child(3) > .article-image-section {
-    background-image: url("Images/NeonCity/Still_015.png");
-}
-
-main > article:nth-child(4) > .article-image-section {
-    background-image: url("Images/CabinFeverFolder/Dorm.png");
-}
-
-main > article:nth-child(5) > .article-image-section {
-    background-image: url("Images/RPD/RPD.png");
-}
-
-main > article:nth-child(6) > .article-image-section {
-    background-image: url("Images/Saw/Saw_Imager_001.png");
-}
-
-main > article:nth-child(7) > .article-image-section {
-    background-image: url("Images/AsymmetricalHorror/VR-Y4-001_09.png");
-}
-
-main > article:nth-child(8) > .article-image-section {
-    background-image: url("Images/VisibilityChance/Mansion-LightTest_002.jpg");
-}
-
-main > article:nth-child(9) > .article-image-section {
-    background-image: url("Images/Penguino/PenguinTest_004.png");
-}
-
-main > article:nth-child(10) > .article-image-section {
-    background-image: url("Images/ThreeJS/Homepage_001.png");
 }
 
 main > article > .article-image-section {
