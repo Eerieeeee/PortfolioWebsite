@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpg" href="/Eerie_favicon.jpg" />
+    <title>Eerie's Portfolio Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <meta http-equiv="Cache-Control" content="public">
+    <link rel="stylesheet" href="homestyle.css">
+    <script src="main.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <div id="nav-logo-section" class="nav-section">
+        <img class="logo" src="Eerie_009.jpg" alt="logo" style="border-radius:0px; height: 20px; width:auto;">
+      </div>
+      
+      <div id="nav-link-section" class="nav-section">
+          <ul class="nav__links">
+            <li><a href="./Index.html" style="color:rgba(238, 217, 30, 0.8);">Home</a></li>
+            <li><a href="./CV.html">About</a></li>
+            <li><a href="./Projects.html">Projects</a></li>
+            <li><a href="./Interests.html">Personal Interests</a></li> 
+          </ul>
+      </div>
+
+      <div id="nav-contact-section" class="nav-section">
+          <a class="cta" href="Contact.html"><contactButton>Contact</contactButton></a>
+      </div>
+  </nav>
+  
+    <video
+    id="tv-texture" loop autoplay muted width="1920" height="1080">
+    <source src="Videos/TV-Texture.mp4">
+    </video>
+
+    <video
+    id="food-texture" loop autoplay muted width="1920" height="1080">
+    <source src="Videos/FoodCollage.mp4">
+    </video>
+
+    <canvas id="bg"></canvas>
+    <main>
+      <div class="wrapper">
+      
+    </div>
+
+    <div class="progress-bar-container">
+      <label for="progress-bar">Loading...</label>
+      <progress id="progress-bar" value="0" max="100"></progress><br>
+    </div>
+
+  <div class="controls-container">
+    <h1>Orbital Controls</h1><br>
+
+    <p>
+      <strong>Left Mouse:</strong> Rotate Camera <br>
+      <strong>Right Mouse:</strong> Pan Camera <br>
+      <strong>Middle Mouse:</strong> Zoom Camera (Smooth)<br>
+      <strong>Scroll Wheel:</strong> Zoom Camera (Snap) <br>
+      <strong>R:</strong> Refresh Page <br>
+      <br>
+      <i>Please Wait One Moment...</i></p>
+    <!-- <h1>Left Mouse:</h1>
+    <h1>Right Mouse: Pan Camera</h1>
+    <h1>Middle Mouse: Zoom (Smooth)</h1>
+    <h1>Scroll: Zoom (Snap)</h1><br> -->
+
+    
+  </div>
+
+  <div class="popup" style="position: fixed;">
+    <button id="close">&times;</button>
+    
+      <br>
+      <br>
+    </p>
+    <h2>Thank you for visiting!</h2>
+  </div>
+    </main>
+ 
+    <!-- <script type="module" src="/main.js"></script> -->
+  </body>
+</html>

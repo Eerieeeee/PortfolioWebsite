@@ -1,0 +1,765 @@
+/* I found a font on Google Fonts, this is a source that finds the font type so i can use it */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+/* Not quite sure, but i think this is like creating variables that i can call later in the script */
+:root {
+  --background-color: rgb(0, 0, 0);
+  --border-color: rgb(255,255,255,0.5);
+  --highlight-color: rgba(238, 217, 30, 0.8);
+  --button-color: rgb(199, 180, 9, 0.8);
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, a, p, span {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+    color: white;
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--highlight-color);
+}
+
+/* Nav Bar Attributes */
+nav {
+    background-color: black;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    margin:auto;
+  }
+  
+  /* Nav Bar Division Attributes Top of Screen*/
+  nav > .nav-section {
+    padding: 2rem 2rem;
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Splits up the Nav Bar and calculates the space of each section */
+  #nav-logo-section,
+  #nav-link-section {
+    flex-basis: calc(100%/3);
+  }
+  #nav-contact-section {
+    border-left: 1px solid var(--border-color);
+    flex-grow: 1;
+  }
+  
+  #nav-logo-section {
+    justify-content: flex-start;
+  }
+  
+  /* #nav-logo-section{width: 1%} */
+  
+  #nav-link-section {
+    border-left: 1px solid var(--border-color);
+    gap: 0rem;
+  }
+  
+  #nav-contact-section {
+    gap: 2rem;
+  }
+  
+  #article-nav-section{
+    gap: 2rem;
+  }
+
+
+/* rearranges the nav links to side by side */
+.nav__links{
+    columns: 2;
+    list-style: none;
+  }
+  
+  .nav__links li{
+    display: inline-block;
+    padding: 0px 0px;
+  }
+  
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav__links li a:hover{
+    color: var(--highlight-color);
+}
+  
+/* creates the contact button */
+contactButton{
+    padding: 7.5px;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+  /* changes the contact button colour when hovered over */
+contactButton:hover{
+    background-color: var(--highlight-color);
+}  
+
+li {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+    transition: opacity 400ms ease;
+    margin:auto;
+    justify-content: center;
+    text-align: left;
+}
+
+header, section, blockquote{
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    padding:30px 10%;
+  }
+
+  /* The bad Eerie Logo sizing */
+.logo{
+    margin-left: 60px;
+    transform: scale(4); 
+}
+
+main {
+    flex-grow: 1;
+    position: relative;
+    overflow:hidden;
+}
+
+main > article {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 3fr 1fr;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: transform 400ms ease;
+}
+
+main > article[data-status="inactive"] {
+    transform: translateX(-100%);
+    transition: none;
+}
+
+main > article[data-status="active"] {
+    transform: translateX(0%);
+}
+
+main > article[data-status="before"] {
+    transform: translateX(-100%);
+}
+
+main > article[data-status="after"] {
+    transform: translateX(100%);
+}
+
+main > article[data-status="becoming-active-from-before"] {
+    transform: translateX(-100%);
+    transition: none;
+}
+
+main > article[data-status="becoming-active-from-after"] {
+    transform: translateX(100%);
+    transition: none;
+}
+
+main > article > .article-section {
+    height: 100%;
+    display: flex;
+}
+
+main > article > .article-description-section,
+main > article > .article-nav-section {
+    border-left: 1px solid var(--border-color);
+}
+
+main > article > .article-title-section,
+main > article > .article-nav-section {
+    border-top: 1px solid var(--border-color);
+}
+
+main > article:first-child > .article-image-section {
+    background-image: url("Images/Dissertation/Kitchen1.png");
+}
+
+main > article:nth-child(2) > .article-image-section {
+    background-image: url("Images/Lab/LabRender_004.jpg");
+}
+
+main > article:nth-child(3) > .article-image-section {
+    background-image: url("Images/LabRemake/ArnoldConcept_001.png");
+}
+
+
+main > article:nth-child(4) > .article-image-section {
+    background-image: url("Images/NeonCity/Still_015.png");
+}
+
+main > article:nth-child(5) > .article-image-section {
+    background-image: url("Images/CabinFeverFolder/Dorm.png");
+}
+
+main > article:nth-child(6) > .article-image-section {
+    background-image: url("Images/RPD/RPD.png");
+}
+
+main > article:nth-child(7) > .article-image-section {
+    background-image: url("Images/Saw/Saw_Imager_001.png");
+}
+
+main > article:nth-child(8) > .article-image-section {
+    background-image: url("Images/AsymmetricalHorror/VR-Y4-001_09.png");
+}
+
+main > article:nth-child(9) > .article-image-section {
+    background-image: url("Images/VisibilityChance/Mansion-LightTest_002.jpg");
+}
+
+main > article:nth-child(10) > .article-image-section {
+    background-image: url("Images/Penguino/PenguinTest_004.png");
+}
+
+main > article:nth-child(11) > .article-image-section {
+    background-image: url("Images/ThreeJS/Homepage_001.png");
+}
+
+main > article > .article-image-section {
+    background-position: center;
+    background-size: cover;
+}
+
+/* Article Text */
+main > article > .article-description-section {
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+main > article > .article-description-section > p {
+    color:rgba(255, 255, 255, 0.5);
+    font-size: 0.75rem;
+}
+
+main > article > .article-description-section > strong {
+    color:rgba(255, 255, 255, 0.5);
+    font-size: 0.75rem;
+}
+
+main > article > .article-description-section > p > a:hover {
+    text-decoration: underline;
+}
+
+main > article > .article-title-section {
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+main > article > .article-title-section *{
+    color: white;
+}
+
+main > article > .article-title-section > h2 {
+    flex-basis: 50%;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin: 0px;
+    text-transform: uppercase;
+}
+
+main > article > .article-title-section > a {
+    font-size: 24px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+    color: white;
+    margin: 0px;
+}
+
+main > article > .article-title-section > a:hover {
+    color: var(--highlight-color);
+}
+
+main > article > .article-title-section > i {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 2rem;
+}
+
+main > article > .article-nav-section > .article-nav-button {
+    background-color: transparent;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+main > article > .article-nav-section > .article-nav-button:hover {
+    color: var(--highlight-color);
+}
+
+main > article > .article-nav-section > .article-nav-button:nth-child(2) {
+    border-left: 1px solid var(--border-color);
+}
+
+
+@media screen and (min-width: 768px) {
+
+    /* creates the contact button */
+    contactButton{
+        padding: 9px 25px;
+        background-color: var(--button-color);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
+    /* changes the contact button colour when hovered over */
+    contactButton:hover{
+        background-color: var(--highlight-color);
+    }  
+
+    nav{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        background-color: var(--background-color);
+        z-index: 3;
+    }
+
+    /* Nav Bar Division Attributes Top of Screen*/
+    nav > .nav-section {
+        padding: 2rem 2rem;
+        display: flex;
+        gap: 1rem;
+        border-bottom: 1px solid var(--border-color);
+        align-items: center;
+        justify-content: center;
+    }
+  
+    /* Splits up the Nav Bar and calculates the space of each section */
+    #nav-logo-section,
+    #nav-link-section {
+        flex-basis: calc(100%/3);
+    }
+    #nav-contact-section {
+        border-left: 1px solid var(--border-color);
+        flex-grow: 1;
+        justify-content: center;
+    }
+
+    #nav-link-section {
+        border-left: 1px solid var(--border-color);
+        gap: 6rem;
+    }
+  
+    #nav-contact-section {
+        justify-content: center;
+        gap: 3rem;
+  }
+
+   /* rearranges the nav links to side by side */
+   .nav__links{
+    list-style: none;
+  }
+  
+  .nav__links li{
+    display: inline-block;
+    padding: 0px 30px;
+  }
+
+  main > article {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 0.3fr;
+}
+
+  main > article > .article-image-section {
+    background-position: center;
+    background-size: cover;
+}
+
+  /* Article Text */
+    main > article > .article-description-section {
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    }
+
+    main > article > .article-description-section > p {
+    font-size: 1rem;
+    }
+
+    main > article > .article-title-section > h2 {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    main > article > .article-title-section > a {
+        font-size: 32px;
+    }
+
+    main > article > .article-title-section {
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 2rem 2rem;
+    }
+
+    main > article > .article-nav-section > .article-nav-button {
+        align-items: baseline;
+        font-size: 1rem;
+        flex-grow: 1;
+
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    nav{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        background-color: var(--background-color);
+        z-index: 3;
+    }
+
+    /* Nav Bar Division Attributes Top of Screen*/
+    nav > .nav-section {
+        padding: 2rem 2rem;
+        display: flex;
+        gap: 1rem;
+        border-bottom: 1px solid var(--border-color);
+        align-items: center;
+        justify-content: center;
+    }
+  
+    /* Splits up the Nav Bar and calculates the space of each section */
+    #nav-logo-section,
+    #nav-link-section {
+        flex-basis: calc(100%/3);
+    }
+    #nav-contact-section {
+        border-left: 1px solid var(--border-color);
+        flex-grow: 1;
+        justify-content: center;
+    }
+
+    #nav-link-section {
+        border-left: 1px solid var(--border-color);
+        gap: 6rem;
+    }
+  
+    #nav-contact-section {
+        justify-content: center;
+        gap: 3rem;
+  }
+
+   /* rearranges the nav links to side by side */
+   .nav__links{
+    columns: 1;
+    list-style: none;
+  }
+  
+  .nav__links li{
+    display: inline;
+    padding: 0px 30px;
+  }
+
+  main > article {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 3fr .8fr;
+}
+
+  main > article > .article-image-section {
+    background-position: center;
+    background-size: cover;
+}
+
+  /* Article Text */
+    main > article > .article-description-section {
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    }
+
+    main > article > .article-description-section > p {
+    font-size: 21px;
+    }
+
+    main > article > .article-title-section > h2 {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    main > article > .article-title-section > a {
+        font-size: 48px;
+    }
+
+    main > article > .article-title-section {
+        align-items: center;
+        justify-content: space-between;
+        padding: 3rem 3rem;
+    }
+
+    main > article > .article-nav-section > .article-nav-button {
+        font-size: 2rem;
+        flex-grow: 1;
+    }    
+
+h1, h2, h3, a, p, span {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+    color: white;
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--highlight-color);
+}
+
+/* Nav Bar Attributes */
+nav {
+    width: 100%;
+    height: 9%;
+    display: flex;
+    margin:auto;
+  }
+  
+  /* Nav Bar Division Attributes Top of Screen*/
+  nav > .nav-section {
+    padding: 2rem 2rem;
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Splits up the Nav Bar and calculates the space of each section */
+  #nav-logo-section,
+  #nav-link-section {
+    flex-basis: calc(100%/3);
+  }
+  #nav-contact-section {
+    border-left: 1px solid var(--border-color);
+    flex-grow: 1;
+  }
+  
+  #nav-logo-section {
+    justify-content: flex-start;
+  }
+  
+  /* #nav-logo-section{width: 1%} */
+  
+  #nav-link-section {
+    border-left: 1px solid var(--border-color);
+    gap: 6rem;
+  }
+  
+  #nav-contact-section {
+    gap: 3rem;
+  }
+  
+  #article-nav-section{
+    gap: 3rem;
+  }
+
+
+/* rearranges the nav links to side by side */
+.nav__links{
+    list-style: none;
+}
+  
+.nav__links li{
+    display: inline;
+    padding: 0px 30px;
+}
+  
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav__links li a:hover{
+    color: var(--highlight-color);
+}
+  
+/* creates the contact button */
+contactButton{
+    padding: 9px 25px;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+  /* changes the contact button colour when hovered over */
+contactButton:hover{
+    background-color: var(--highlight-color);
+}  
+
+li {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+    transition: opacity 400ms ease;
+    margin:auto;
+    justify-content: center;
+    text-align: center;
+}
+
+header, section, blockquote{
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    padding:30px 10%;
+  }
+
+  /* The bad Eerie Logo sizing */
+.logo{
+    transform: scale(4); 
+}
+
+main {
+    flex-grow: 1;
+    position: relative;
+    overflow:hidden;
+}
+
+main > article {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: transform 400ms ease;
+}
+
+main > article[data-status="inactive"] {
+    transform: translateX(-100%);
+    transition: none;
+}
+
+main > article[data-status="active"] {
+    transform: translateX(0%);
+}
+
+main > article[data-status="before"] {
+    transform: translateX(-100%);
+}
+
+main > article[data-status="after"] {
+    transform: translateX(100%);
+}
+
+main > article[data-status="becoming-active-from-before"] {
+    transform: translateX(-100%);
+    transition: none;
+}
+
+main > article[data-status="becoming-active-from-after"] {
+    transform: translateX(100%);
+    transition: none;
+}
+
+main > article > .article-section {
+    height: 100%;
+    display: flex;
+}
+
+main > article > .article-description-section,
+main > article > .article-nav-section {
+    border-left: 1px solid var(--border-color);
+}
+
+main > article > .article-title-section,
+main > article > .article-nav-section {
+    border-top: 1px solid var(--border-color);
+}
+
+main > article:first-child > .article-image-section {
+    background-image: url("Images/Dissertation/Kitchen1.png");
+}
+
+main > article:nth-child(2) > .article-image-section {
+    background-image: url("Images/Lab/LabRender_004.jpg");
+}
+
+/* main > article:nth-child(3) > .article-image-section {
+    background-image: url("Images/LabRemake/ArnoldConcept_001.png");
+} */
+
+main > article:nth-child(3) > .article-image-section {
+    background-image: url("Images/NeonCity/Still_015.png");
+}
+
+main > article:nth-child(4) > .article-image-section {
+    background-image: url("Images/CabinFeverFolder/Dorm.png");
+}
+
+main > article:nth-child(5) > .article-image-section {
+    background-image: url("Images/RPD/RPD.png");
+}
+
+main > article:nth-child(6) > .article-image-section {
+    background-image: url("Images/Saw/Saw_Imager_001.png");
+}
+
+main > article:nth-child(7) > .article-image-section {
+    background-image: url("Images/AsymmetricalHorror/VR-Y4-001_09.png");
+}
+
+main > article:nth-child(8) > .article-image-section {
+    background-image: url("Images/VisibilityChance/Mansion-LightTest_002.jpg");
+}
+
+main > article:nth-child(9) > .article-image-section {
+    background-image: url("Images/Penguino/PenguinTest_004.png");
+}
+
+main > article:nth-child(10) > .article-image-section {
+    background-image: url("Images/ThreeJS/Homepage_001.png");
+}
+
+main > article > .article-image-section {
+    background-position: center;
+    background-size: cover;
+}
+}
+
