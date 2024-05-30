@@ -5,21 +5,21 @@
     <link rel="icon" type="image/jpg" href="/Eerie_favicon.jpg" />
     <title>Eerie's Portfolio Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-    <meta http-equiv="Cache-Control" content="public">
-    <link rel="stylesheet" href="homestyle.css">
-    <script src="main.js"></script>
+    <!-- <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <meta http-equiv="Cache-Control" content="public"> -->
+    <link rel="stylesheet" href="./homestyle.css">
+    <!-- <script src="main.js"></script> -->
   </head>
 
-  <body>
+  
     <nav>
       <div id="nav-logo-section" class="nav-section">
-        <img class="logo" src="Eerie_009.jpg" alt="logo" style="border-radius:0px; height: 20px; width:auto;">
+        <img src="Images/Logo/Eerie_009.jpg" alt="logo" style="border-radius:0px;  height: 80px; width:auto;">
       </div>
       
       <div id="nav-link-section" class="nav-section">
           <ul class="nav__links">
-            <li><a href="./Index.html" style="color:rgba(238, 217, 30, 0.8);">Home</a></li>
+            <li><a href="./index.html" style="color:rgba(238, 217, 30, 0.8);">Home</a></li>
             <li><a href="./CV.html">About</a></li>
             <li><a href="./Projects.html">Projects</a></li>
             <li><a href="./Interests.html">Personal Interests</a></li> 
@@ -27,60 +27,49 @@
       </div>
 
       <div id="nav-contact-section" class="nav-section">
-          <a class="cta" href="Contact.html"><contactButton>Contact</contactButton></a>
+          <a class="cta" href="./Contact.html"><contactButton>Contact</contactButton></a>
       </div>
   </nav>
   
-    <video
-    id="tv-texture" loop autoplay muted width="1920" height="1080">
-    <source src="Videos/TV-Texture.mp4">
-    </video>
+  <div class="progress-bar-container" style="width:1920px; height:1080px; background-color: rgb(163, 157, 96); 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    position: fixed;
+    top: 0%;">
 
-    <video
-    id="food-texture" loop autoplay muted width="1920" height="1080">
-    <source src="Videos/FoodCollage.mp4">
-    </video>
-
-    <canvas id="bg"></canvas>
-    <main>
-      <div class="wrapper">
-      
-    </div>
-
-    <div class="progress-bar-container">
-      <label for="progress-bar">Loading...</label>
-      <progress id="progress-bar" value="0" max="100"></progress><br>
-    </div>
-
-  <div class="controls-container">
-    <h1>Orbital Controls</h1><br>
-
-    <p>
-      <strong>Left Mouse:</strong> Rotate Camera <br>
-      <strong>Right Mouse:</strong> Pan Camera <br>
-      <strong>Middle Mouse:</strong> Zoom Camera (Smooth)<br>
-      <strong>Scroll Wheel:</strong> Zoom Camera (Snap) <br>
-      <strong>R:</strong> Refresh Page <br>
-      <br>
-      <i>Please Wait One Moment...</i></p>
-    <!-- <h1>Left Mouse:</h1>
-    <h1>Right Mouse: Pan Camera</h1>
-    <h1>Middle Mouse: Zoom (Smooth)</h1>
-    <h1>Scroll: Zoom (Snap)</h1><br> -->
-
-    
+    <p style="font-size: 2rem;" for="progress-bar">Loading...</p>
+    <progress id="progress-bar" value="0" max="100"></progress><br>
   </div>
 
-  <div class="popup" style="position: fixed;">
-    <button id="close">&times;</button>
+<div class="controls-container" style="width:1920px; height:1080px; background-color: rgb(163, 157, 96);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    position: fixed;
+    top: 0%;
+    z-index: 0;">
+  <h1 style="font-size: 3rem;">Orbital Controls</h1><br>
+
+  <p style="font-size: 2rem;">
+    <strong>Left Mouse:</strong> Rotate Camera <br>
+    <strong>Right Mouse:</strong> Pan Camera <br>
+    <strong>Middle Mouse:</strong> Zoom Camera (Smooth)<br>
+    <strong>Scroll Wheel:</strong> Zoom Camera (Snap) <br>
+    <strong>R:</strong> Refresh Page <br>
+    <br>
+    <i>Please Wait One Moment...</i></p>    
+</div>
+
+  <body style="height:8px;">
     
-      <br>
-      <br>
-    </p>
-    <h2>Thank you for visiting!</h2>
-  </div>
-    </main>
- 
-    <!-- <script type="module" src="/main.js"></script> -->
+  <main>
+    <canvas id="bg" style="position:fixed; left:0; top:0; z-index:-1;"></canvas> 
+  </main>
+        <video id="TV-Texture" playsinline webkit-playsinline muted loop autoplay width="320" height="240" src="/Videos/TV-Texture.mp4" style="display: none;"></video>
+        <video id="FoodCollage" playsinline webkit-playsinline muted loop autoplay width="320" height="240" src="/Videos/FoodCollage.mp4" style="display: none;"></video>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
