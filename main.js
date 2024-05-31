@@ -1,10 +1,11 @@
 import * as THREE from 'three';
 
+// import mp4 from './background.mp4';
+
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 var scene, camera, cameraP, cameraF, renderer, controls, mouse, raycaster, selectedPiece = null;
-var timer = 6000;
 
 // SETUP
 
@@ -40,7 +41,7 @@ loadingManager.onLoad = function() {
     progressBarContainer.style.display = 'none';
     setTimeout(() => {
         controlsContainer.style.display = 'none';
-    }, timer);  
+    }, 6000);  
     }
 
 
@@ -81,8 +82,11 @@ renderer = new THREE.WebGLRenderer({
 });
 
 //defines the size of the renderers window
+// container = document.getElementById('canvas');
 renderer.setPixelRatio( window.devicePixelRatio);
 renderer.setSize( window.innerWidth, window.innerHeight);
+// container.appendChild(renderer.domElement);
+
 camera.position.set(-10, 25, 50);
 
 //tells the renderer to render
@@ -94,7 +98,7 @@ renderer.outputEncoding = THREE.sRGBEncoding;
 // renderer.toneMapping = THREE.ACESFilmicToneMapping;
 
     modelLoader.load(
-        'Models/Homepage_007.glb',
+        'Homepage_007.glb',
         
         function(gltf) {
             scene.add( gltf.scene );
@@ -113,11 +117,12 @@ renderer.outputEncoding = THREE.sRGBEncoding;
         )
 
 // ADDING VIDEO TEXTURE TO PLANE
-var video = document.getElementById('tv-texture'); //define video as a var
-video.src="Videos/TV-Texture.MP4"
+const video = document.getElementById('TV-Texture'); //define video as a const
+
+video.src="https://github.com/Eerieeeee/PortfolioWebsite/raw/main/Videos/TV-Texture.mp4";
 video.load();
 video.play();
-var texture = new THREE.VideoTexture(video); //call the var video as a texture
+const texture = new THREE.VideoTexture(video); //call the var video as a texture
 texture.needsUpdate; //refresh/update the video - like in animation
 texture.minFilter = THREE.LinearFilter;
 texture.magFilter = THREE.LinearFilter;
@@ -126,7 +131,7 @@ texture.crossOrigin = 'anonymous';
 
 var imageObject = new THREE.Mesh(
     new THREE.PlaneGeometry(9.45,5.5),
-    new THREE.MeshBasicMaterial({map: texture}),);
+    new THREE.MeshBasicMaterial({map: texture, side: THREE.FrontSide, toneMapped: false}),);
 
 imageObject.position.set(7.15, 6.9,  4.95)
 imageObject.rotation.set(0,-0.7,0)
@@ -134,11 +139,12 @@ imageObject.rotation.set(0,-0.7,0)
 scene.add(imageObject);
 
 // //FOOD COLLAGE VIDEO
-var foodVideo = document.getElementById('food-texture'); //define video as a var
-foodVideo.src="Videos/FoodCollage.mp4"
+const foodVideo = document.getElementById('FoodCollage'); //define video as a const
+
+foodVideo.src="https://github.com/Eerieeeee/PortfolioWebsite/raw/main/Videos/FoodCollage.mp4";
 foodVideo.load();
 foodVideo.play();
-var foodTexture = new THREE.VideoTexture(foodVideo); //call the var video as a texture
+const foodTexture = new THREE.VideoTexture(foodVideo); //call the var video as a texture
 foodTexture.needsUpdate; //refresh/update the video - like in animation
 foodTexture.minFilter = THREE.LinearFilter;
 foodTexture.magFilter = THREE.LinearFilter;
@@ -147,7 +153,7 @@ foodTexture.crossOrigin = 'anonymous';
 
 var foodObject = new THREE.Mesh(
     new THREE.PlaneGeometry(5.05, 2.84),
-    new THREE.MeshBasicMaterial({map: foodTexture}),);
+    new THREE.MeshBasicMaterial({map: foodTexture, side: THREE.FrontSide, toneMapped: false}),);
 
 foodObject.position.set(15, 7.97, -8.67)
 foodObject.rotation.set(0,0.07,0)
@@ -197,7 +203,7 @@ function animate () {
     renderer.render( scene, camera);
     requestAnimationFrame(animate);
 
-    console.log(camera.rotation);
+    // console.log(camera.rotation);
 }
 
 // //calls the animate function
