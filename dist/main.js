@@ -5,7 +5,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
-var scene, camera, cameraP, cameraF, renderer, controls, mouse, raycaster, selectedPiece = null;
+var scene, camera, renderer, controls, mouse, raycaster, selectedPiece = null;
 
 // SETUP
 
