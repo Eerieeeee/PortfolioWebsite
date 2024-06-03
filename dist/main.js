@@ -119,7 +119,7 @@ renderer.outputEncoding = THREE.sRGBEncoding;
 // ADDING VIDEO TEXTURE TO PLANE
 const video = document.getElementById('TV-Texture'); //define video as a const
 
-video.src="https://github.com/Eerieeeee/PortfolioWebsite/raw/main/Videos/TV-Texture.mp4";
+video.src="https://github.com/Eerieeeee/PortfolioWebsite/raw/main/dist/Videos/TV-Texture.mp4";
 video.load();
 video.play();
 const texture = new THREE.VideoTexture(video); //call the var video as a texture
@@ -141,7 +141,7 @@ scene.add(imageObject);
 // //FOOD COLLAGE VIDEO
 const foodVideo = document.getElementById('FoodCollage'); //define video as a const
 
-foodVideo.src="https://github.com/Eerieeeee/PortfolioWebsite/raw/main/Videos/FoodCollage.mp4";
+foodVideo.src="https://github.com/Eerieeeee/PortfolioWebsite/raw/main/dist/Videos/FoodCollage.mp4";
 foodVideo.load();
 foodVideo.play();
 const foodTexture = new THREE.VideoTexture(foodVideo); //call the var video as a texture
