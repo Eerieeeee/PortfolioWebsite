@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpg" href="/Eerie_favicon.jpg" />
+    <title>Penguino Race</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox.css">
+  </head>
+
+  <video id="backgroundVideo" autoplay loop muted poster="Images/Penguino/Concept_002.jpg">
+    <source src="Videos/Penguino.mp4" type="video/mp4">
+  </video>
+
+  <body>
+
+      <nav>
+        <div id="nav-logo-section" class="nav-section">
+          <img src="Images/Logo/Eerie_009.jpg" alt="logo" style="border-radius:0px;  height: 80px; width:auto;">
+        </div>
+        
+        <div id="nav-link-section" class="nav-section">
+            <ul class="nav__links">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./CV.html">About</a></li>
+              <li><a href="./Projects.html">Projects</a></li>
+              <li><a href="./Interests.html">Personal Interests</a></li>
+            </ul>
+        </div>
+
+        <div id="nav-contact-section" class="nav-section">
+          <a class="cta" href="Contact.html"><contactButton>Contact</contactButton></a>
+        </div>
+    </nav>
+
+    <div class="floating buttons">
+      <a class="cta" href="./P-ThreeJS.html"><topicButton>Next Project</topicButton> </a>
+      <a class="cta" href="./P-Y4Vert.html"><topicButton>Previous Project</topicButton> </a>
+      <a class="cta" href="./Projects.html"><topicButton>Back to Projects</topicButton> </a>
+    </div>
+
+    <div class="row">
+      <div class="column left">
+      </div>     
+
+      <div class="column middle">
+
+      <h3>Penguino Race</h3>
+    
+      <h4>The Arduino Penguin Platformer!</h4><br>
+        <p>
+          Each year there was a <strong>
+            
+          </strong> between the different year groups, where we were split off into groups to make a <strong>short game and build an Arduino controller</strong> to use alongside the project, this 
+          was typically a much <strong>smaller project</strong> than the rest of our projects as it <strong>ran alongside 2 of our larger projects in the first semester.</strong><br>
+          In my third year at university our group created a <strong>platformer game</strong> and also a <strong>controller using an Arduino Kit.</strong> Each group member had to <strong>make their own level</strong> and the 
+          player had to go from one end of the level to another trying to <strong>stay on platforms and collect powerups to aid them.</strong> The player had to <strong>beat the clock</strong> in order to pass the level!<br>  
+
+          <br>
+          <img src="Images/Penguino/PenguinTest_004.jpg" alt="Render of the Main Menu Background for Penguino" style="width:640px;height:360px; border-radius: 15px;"><br>
+           
+          <br>
+          <strong>Genre:</strong> <i>Platformer</i><br>
+          <strong>Engine:</strong> <i>Unity</i><br>
+          <strong>Development Period:</strong> <i>Approx 8 Weeks</i><br>
+          <strong>Platform:</strong> <i>PC</i><br>
+        </p>
+
+        <p>
+            <br>
+            <h4>Art Direction</h4><p>
+            <br>
+            <h5>Inspiration</h5><p><br>
+            Each group was <strong>decided by votes to certain topics</strong> that each student wanted to do, we had a first and second choice. One of mine was <strong>Indie Games</strong> and that was the group I got put into.
+            So, using <strong>Miro to help brainstorm our ideas,</strong> our group began by collecting a bunch of games from <strong>Steam and also Itch.io</strong> that were Indie Games as you can see in the image below. 
+            During our research into Indie Games, we noted that the most popular genres were; <strong>3D, Retro, Singleplayer, Adventure, Horror and Platforming.</strong><br>
+
+            <br>
+            <img src="Images/Penguino/MiroBoard.jpg" alt="Render of the Main Menu Background for Penguino" style=" border-radius: 15px;"><br>
+            <i>We used colour coded stars in order to vote on which games we personally liked for our potential inspiration.</i><br>
+
+            <br>
+            We took note that the <strong>majority of our votes went to platforming games</strong> and we were heading towards a <strong>darker aesthetic like Limbo</strong> for our game until someone suggested 
+            making it <strong>Christmas themed since it was December at the time.</strong> We then started trying to find inspiration for games that had <strong>snowy environments</strong> and began to make a moodboard 
+            out of them all. We were inspired by old platforming games like <strong>Mario 64, Crash Bandicoot</strong> and some others, taking inspiration from their snow levels too!<br>
+
+            <br>
+            <img src="Images/Penguino/Inspirations.jpg" alt="Render of the Main Menu Background for Penguino" style=" border-radius: 15px;"><br>
+            <i>This is the Moodboard that I complied at the time.</i><br>
+
+            <br>
+            <h5>Environment</h5><p><br>
+            With the moodboard above and other imagery that the group members had collected, we came up with the idea that the player would be a <strong>Penguin trying to deliver letters to Igloos,</strong> this gave a 
+            reason to <strong>avoid the water</strong> that would be in our levels as the <strong>letters would be ruined.</strong> The player would have to navigate <strong>across ice and other platforms</strong> avoiding 
+            the water below, some of the platforms would <strong>break after a few seconds</strong> of the player standing on them.<br>
+
+            <br>
+            <img src="Images/Penguino/Concept_003.jpg" alt="Render of the Main Menu Background for Penguino" style=" border-radius: 15px;"><br>
+            <i>A rough concept layout of what my level would look like.</i><br>
+
+            <br>
+            The goal of the player is to <strong>reach the end of the level within the given time limit,</strong> as each level would have a specific time that they had to beat otherwise they would fail. While the controls 
+            remained the same across each level, we had designed it so that <strong>each group member could decide if their level was Top Down or a more 3rd person camera position.</strong><br>
+            For the game, we all decided to go for a <strong>low poly style</strong> since a lot of our inspiration came from <strong>retro style platformers.</strong> My level was the last level in the game, since I was in 
+            3rd year (the longest student), which meant that it also had to be the <strong>hardest level</strong> of the game. Since there was a timer, I decided to make some <strong>Ice Walls</strong> that would split up the 
+            environment like a Maze and also have lots of smaller platforms for the player to jump across as well. To ensure it wasn't too difficult, I made sure that there was <strong>no dead ends</strong> and that the 
+            maze was relatively <strong>simple to navigate!</strong><br>
+
+            <br>
+            <img src="Images/Penguino/MyLevel.jpg" alt="Render of the Main Menu Background for Penguino" style=" border-radius: 15px;"><br>
+            <i>This is the final outcome of my level.</i><br>
+          </p>
+
+          <p>
+            <br>
+            <h4>Documentation</h4><p>
+
+            <br>
+            <h5>Project Purpose</h5><p><br>
+            The main intention of this project is to get students together in slightly larger groups than they are used to, <strong>interacting with people outside of their normal circles</strong> to allow them to develop 
+            their <strong>creative and also their collaborative skills with others.</strong> This was an opportunity for students from different years to <strong>share their knowledge and experience</strong> with others.<br>
+            The second focus of this project is for the students to develop their skills with <strong>Physical Computing and make Arduino controllers</strong> for their games. During the 8 weeks of this projects students 
+            attend <strong>physical computing classes</strong> and also use <strong>Tinkercad exercises</strong> to learn how to use <strong>Arduino Boards and Circuits.</strong> You are allowed to use whatever 
+            <strong>Sensors and Actuators</strong> you want when making your controller.
+            <br>      
+
+            <br>
+            <img src="Images/Penguino/ArduinoCode.jpg" style="border-radius: 15px;"><br>
+            <i>Code showing some collision detections for the Penguin and the output for each.</i><br>
+
+            <br>
+            <h5>Responsibilities</h5><p><br>
+            While I believe there may have been some wish for the older students to take a leadership role within the groups, I tried to help set the group up in a way that <strong>we could all share ideas equally </strong>
+            and still work together in a way that was <strong>more enjoyable for everyone.</strong> Since the nature of these projects were a bit more <strong>simple, compared to the other projects</strong> that we had on-going
+            at the time, myself and the second years were completely comfortable with the level of work that we had to do, however the first years were still learning, so <strong>I offered to help to them throughout the weeks </strong>
+            that we worked together on these projects, I would <strong>reach out a couple times a week</strong> to see how they were getting on and if they needed any help we would<strong>talk it over through messages</strong>  on discord 
+            or call if they needed to, I took a more <strong>supportive role in these projects.</strong><br>
+
+            <br>
+            <img src="Images/Penguino/MenuPlaceholder.jpg" style="border-radius: 15px;"><br>
+            <i>Placeholder for the Main Menu while I created the Assets.</i><br>
+
+            <br>
+            <h5>Menu Layout</h5><p><br>
+            Due to having the most experience in the group, I tried to pick up more of the <strong>extra jobs</strong>, since everyone was designing their own level and were chipping in to ideas and coding, I took responsibility 
+            for <strong>creating the menu and linking all of the levels for each person,</strong> so that they wouldn't have to worry about it and could focus on their work better. Since I'd already had to make a few menus for my 
+            projects over the years it was no hassle for me to set up, I also <strong>designed the background assets for the main menu aswell.</strong><br>
+
+            <br>
+            <video width="480" height="280" controls>
+              <source src="Videos/PenguinoAnim_005.mp4" type="video/mp4">
+            </video><br>
+            <i>The models created for the Main Menu</i><br>
+            </p>
+          
+          <p>
+            <br>
+            <h4>Unity Implementation</h4><p>            
+            
+            <br>
+            <h5>The Arduino</h5><p><br>
+            Part of the Learning Outcome for this project was to <strong>develop skills in physical computing </strong>and this was done by creating a physical controller to be used to play the game with an Arduino board and circuitry.
+            Before creating our controller, our group first set out to<strong> define what our mechanics would be in the game</strong> as this would <strong>inform the design of our controller</strong> and what we were going to add to it.<br>
+
+            <br>
+            <img src="Images/Penguino/Mechanics.jpg" style="border-radius: 15px;"><br>
+            <i>We took to Miro to figure out our Mechanics</i><br>
+          </p>
+
+          <p>
+            <br>
+            <h4>Self-Reflection</h4><p>
+            
+            <br>
+            Areas that I believe that I did well on during the process of this project;<br>
+              
+            <br>
+            <li class="bullet list">I believe that my biggest strength in this project was taking on a <strong>supportive role instead of a managerial one,</strong> not only was I working on my own level, the main menu and doing my share of
+              the coding, but also ensuring that I made time to <strong>help and support the first years as well,</strong> making sure that they were able to solve any issues that they came across.
+            </li><br>
+            
+            <li class="bullet list">Due to a lot of this project being done online, I used <strong>Miro in a way to make sure everyone had an equal way to share their ideas and thoughts,</strong> usings coloured post-it notes and stars for people
+              to <strong>write down ideas</strong> and also to <strong>vote for what inspirations and mechanics</strong> they liked the best.
+            </li><br>
+      
+            <li class="bullet list">I'd never had a leadership role before this and I feel <strong>I was successful in helping the rest of the team come together and be organised as well</strong>  as ensuring that everyone was able to
+              complete their work in time for the deadline.
+            </li><br>
+          </p>
+
+          <p>
+            <br>
+            These are some areas that I believe I could improve upon.<br>
+
+            <br>
+            <li class="bullet list">Due to having to focus on many things at once, I perhaps <strong>leaned on the low-poly style a bit much</strong> and hindsight made me realise that I had the time to increase the amount/quality of my
+              assets if <strong>I had been a bit more brave.</strong> I could have done more with my assets than I did, I perhaps played it a little too safe here.
+            </li><br>
+
+            <li class="bullet list">Realistically, my desire to create the hardest level led to it becoming the primary focus of my level's design. I feel that it <strong>hampered the overall design of my level</strong> as I know I could have
+              been<strong> more creative with the layout and design.</strong>
+            </li><br>
+
+            <li class="bullet list">Along with my low-poly style, this could have been a good opportunity for me to create more <strong>stylised textures to fit my low-poly models.</strong> It was a shame that I never considered it at the time,
+              leaving my texturing feeling very simple and plain.
+            </li><br>
+          </p>
+
+            <br>
+            <a id="btnScrollToTop" class="cta"><projectButton>Scroll To Top</projectButton> </a><br>
+
+            <br>
+            <br>
+            <p style="font-size: 16px;">© All rights reserved</p>
+          </div>
+          
+          <div class="column right">
+            <h4>Third Year</h4>
+            <h5>Year 2021</h5>
+            
+          </div>
+
+          <section class="masonry">
+
+            <div class="column-one">
+              <a href="Images/Penguino/Concept_001.jpg" data-lightbox="Pictures" data-title="Moodboard of environment ideas and some Penguin Concept">
+                <img src="Images/Penguino/Concept_001.jpg" style="border-radius: 15px;">
+              </a>
+
+              <a href="Images/Penguino/Concept_002.jpg" data-lightbox="Pictures" data-title="Concept of the Main Menu Environment">
+                <img src="Images/Penguino/Concept_002.jpg" style="border-radius: 15px;">
+              </a>
+              
+              <a href="Images/Penguino/MiroBoard.jpg" data-lightbox="Pictures" data-title="Miro Board of Indie Games list we collected">
+                <img src="Images/Penguino/MiroBoard.jpg" style="border-radius: 15px;">
+              </a>
+
+              <a href="Images/Penguino/Mechanics.jpg" data-lightbox="Pictures" data-title="Miro Board list of potential Mechanics we were thinking of">
+                <img src="Images/Penguino/Mechanics.jpg" style="border-radius: 15px;">
+              </a>
+
+              <a href="Images/Penguino/ArduinoCode.jpg" data-lightbox="Pictures" data-title="Low Poly Penguin Concept">
+                <img src="Images/Penguino/ArduinoCode.jpg" style="border-radius: 15px;">
+              </a>
+            </div>
+
+            <div class="column-two">  
+              <a href="Images/Penguino/Concept_004.jpg" data-lightbox="Pictures" data-title="Low Poly Penguin Concept">
+                <img src="Images/Penguino/Concept_004.jpg" style="border-radius: 15px;">
+              </a>
+
+              <a href="Images/Penguino/PenguinUV_003.jpg" data-lightbox="Pictures" data-title="Simple UV map of my low poly Penguin">
+                <img src="Images/Penguino/PenguinUV_003.jpg" style="border-radius: 15px;">
+              </a>
+
+              <a href="Images/Penguino/PenguinTest_001.jpg" data-lightbox="Pictures" data-title="First Render of the Penguin">
+                <img src="Images/Penguino/PenguinTest_001.jpg" style="border-radius: 15px;">
+              </a>
+            </div>
+
+            <div class="column-three">
+              <a href="Images/Penguino/Inspirations.jpg" data-lightbox="Pictures" data-title="Larger Moodboard for the Environment">
+                <img src="Images/Penguino/Inspirations.jpg" style="border-radius: 15px;">
+              </a>
+
+              <a href="Images/Penguino/PenguinTest_002.jpg" data-lightbox="Pictures" data-title="Second Render, began working on the Environment">
+                <img src="Images/Penguino/PenguinTest_002.jpg" style="border-radius: 15px;">
+              </a>
+
+              <a href="Images/Penguino/PenguinTest_003.jpg" data-lightbox="Pictures" data-title="Third Render of Environment">
+                <img src="Images/Penguino/PenguinTest_003.jpg" style="border-radius: 15px;">
+              </a>
+
+              <a href="Images/Penguino/PenguinTest_004.jpg" data-lightbox="Pictures" data-title="Final Render of the Menu Environment">
+                <img src="Images/Penguino/PenguinTest_004.jpg" style="border-radius: 15px;">
+              </a>
+
+              <a href="Images/Penguino/Render_004.jpg" data-lightbox="Pictures" data-title="The Menu Environment added into my Level as the Finish Line">
+                <img src="Images/Penguino/Render_004.jpg" style="border-radius: 15px;">
+              </a>
+            </div>
+
+            <div class="column-four">
+              <a href="Images/Penguino/Concept_003.jpg" data-lightbox="Pictures" data-title="Top Down Concept of the Layout of my Level">
+                <img src="Images/Penguino/Concept_003.jpg" style="border-radius: 15px;">
+              </a>
+
+              <a href="Images/Penguino/Render_002.jpg" data-lightbox="Pictures" data-title="First Render of my Level's Layout">
+                <img src="Images/Penguino/Render_002.jpg" style="border-radius: 15px;">
+              </a>
+              
+              <a href="Images/Penguino/Render_001.jpg" data-lightbox="Pictures" data-title="Second Render of my Level">
+                <img src="Images/Penguino/Render_001.jpg" style="border-radius: 15px;">
+              </a>             
+
+              <a href="Images/Penguino/MountainHM_001.jpg" data-lightbox="Pictures" data-title="Height Map used for the Mountains in the background of my Level">
+                <img src="Images/Penguino/MountainHM_001.jpg" style="border-radius: 15px;">
+              </a>
+
+              <a href="Images/Penguino/Render_003.jpg" data-lightbox="Pictures" data-title="Zoomed out Render of my Level's finished layout and surrounding Environment">
+                <img src="Images/Penguino/Render_003.jpg" style="border-radius: 15px;">
+              </a>
+            </div>
+          </section>
+    </div>
+
+    <script>
+      const btnScrollToTop = document.querySelector("#btnScrollToTop");
+    
+      btnScrollToTop.addEventListener("click", function () {
+      window.scrollTo(0, 0);
+      });
+    </script>
+
+    <script src="lightbox-plus-jquery.js"></script>
+    <script>
+      document.body.style.overflow="none";
+    </script>
+  </body>
+</html>

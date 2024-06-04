@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpg" href="/Eerie_favicon.jpg" />
+    <title>Eerie's Portfolio Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <meta http-equiv="Cache-Control" content="public"> -->
+    <script type="importmap">
+      {
+          "imports": {
+              "three": "https://unpkg.com/three@0.165.0/build/three.module.js",
+              "three/addons/": "https://unpkg.com/three@0.165.0/examples/jsm/"
+          }
+      }
+  </script>
+
+    <script type="module" src="./dist/main.js"></script>
+    <link rel="stylesheet" href="./homestyle.css">
+    
+    
+  </head>
+
+  
+    <nav style="z-index: 1; background-color: black;">
+      <div id="nav-logo-section" class="nav-section" style="z-index: 1; background-color: black;">
+        <img src="Images/Logo/Eerie_009.jpg" alt="logo" style="border-radius:0px;  height: 80px; width:auto;">
+      </div>
+      
+      <div id="nav-link-section" class="nav-section" style="z-index: 1; background-color: black;">
+          <ul class="nav__links">
+            <li><a href="./index.html" style="color:rgba(238, 217, 30, 0.8);">Home</a></li>
+            <li><a href="./CV.html">About</a></li>
+            <li><a href="./Projects.html">Projects</a></li>
+            <li><a href="./Interests.html">Personal Interests</a></li> 
+          </ul>
+      </div>
+
+      <div id="nav-contact-section" class="nav-section" style="z-index: 1; background-color: black;">
+          <a class="cta" href="./Contact.html"><contactButton>Contact</contactButton></a>
+      </div>
+  </nav>
+  
+  <!-- <div class="progress-bar-container" style="width:1920px; height:1080px; background-color: rgb(163, 157, 96); 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    position: fixed;
+    top: 0%;">
+
+    <p style="font-size: 2rem;" for="progress-bar">Loading...</p>
+    <progress id="progress-bar" value="0" max="100"></progress><br>
+  </div>
+
+<div class="controls-container" style="width:1920px; height:1080px; background-color: rgb(163, 157, 96);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    position: fixed;
+    top: 0%;
+    z-index: 0;">
+  <h1 style="font-size: 3rem;">Orbital Controls</h1><br>
+
+  <p style="font-size: 2rem;">
+    <strong>Left Mouse:</strong> Rotate Camera <br>
+    <strong>Right Mouse:</strong> Pan Camera <br>
+    <strong>Middle Mouse:</strong> Zoom Camera (Smooth)<br>
+    <strong>Scroll Wheel:</strong> Zoom Camera (Snap) <br>
+    <strong>R:</strong> Refresh Page <br>
+    <br>
+    <i>Please Wait One Moment...</i></p>    
+</div> -->
+
+  <body>
+    
+  <main>
+    <canvas id="bg" style="position:fixed; left:0; top:0; z-index:-1;"></canvas> 
+  </main>
+        <video id="TV-Texture" playsinline webkit-playsinline muted loop autoplay width="320" height="240" src="https://github.com/Eerieeeee/PortfolioWebsite/raw/main/Videos/TV-Texture.mp4" style="display: none;"></video>
+        <video id="FoodCollage" playsinline webkit-playsinline muted loop autoplay width="320" height="240" src="https://github.com/Eerieeeee/PortfolioWebsite/raw/main/Videos/FoodCollage.mp4" style="display: none;"></video>
+
+
+  </body>
+</html>
