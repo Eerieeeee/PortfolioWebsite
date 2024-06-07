@@ -1,4 +1,4 @@
-header ('Access-Control-Allow-Origin: https://eerieeeee.github.io/PortfolioWebsite/');
+header ('Access-Control-Allow-Origin: https://eerieeeee.github.io');
 
 
 import * as THREE from 'https://github.com/Eerieeeee/PortfolioWebsite/three/build/three.module.js';
