@@ -41,7 +41,7 @@ loadingManager.onLoad = function() {
     progressBarContainer.style.display = 'none';
     setTimeout(() => {
         controlsContainer.style.display = 'none';
-    }, 1);  
+    }, 6000);  
     }
 
 
@@ -179,24 +179,36 @@ scene.fog = new THREE.FogExp2(0x9E9759, 0.005);
 
 //LIGHTING
 // X back/right from camera, Y is up? z is forward?
-const pointLight = new THREE.PointLight(0xEDE175)
-pointLight.position.set(100, 20, 0)
+// 0xEDE175
+const pointLight = new THREE.PointLight(0xffffff, 25)
+pointLight.position.set(20, 10, -10)
 pointLight.castShadow = true;
 
-const pointLight2 = new THREE.PointLight(0xffffff, 100)
+const pointLight2 = new THREE.PointLight(0xffffff, 25)
 pointLight2.position.set(1, 10, 10) 
 pointLight2.castShadow = true;
+
+const pointLight3 = new THREE.PointLight(0xffffff, 25)
+pointLight3.position.set(-17, 10, -12)
+pointLight3.castShadow = true;
 
 const directionalLight = new THREE.DirectionalLight(0xffffff, 0.75);
 directionalLight.castShadow = true;
 directionalLight.position.set(2.36, 4.57, 8.98);
+
+// const geometry = new THREE.BoxGeometry(1,1,1);
+// const material = new THREE.MeshBasicMaterial(0x00ff00);
+// const cube = new THREE.Mesh(geometry, material);
+// cube.position.set(-17, 10, -12)
+// scene.add(cube);
+
 
 scene.add(directionalLight);
 
 // const ambientLight = new THREE.AmbientLight(0x999999, 100)
 // ambientLight.castShadow = true;
 
-scene.add(pointLight, pointLight2)
+scene.add(pointLight, pointLight2, pointLight3)
 
 controls = new OrbitControls(camera, renderer.domElement);
 // console.log(controls.getDistance);
