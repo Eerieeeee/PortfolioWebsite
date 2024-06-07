@@ -1,9 +1,9 @@
-import * as THREE from './three/build/three.module.js';
+import * as THREE from 'three/build/three.module.js';
 
 // import mp4 from './background.mp4';
 
-import { GTLFLoader } from './three/examples/js/loaders/GLTFLoader.js';
-import { OrbitControls } from './three/examples/js//controls/OrbitControls.js';
+import { GTLFLoader } from 'three/examples/js/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/examples/js//controls/OrbitControls.js';
 
 var scene, camera, cameraP, cameraF, renderer, controls, mouse, raycaster, selectedPiece = null;
 
