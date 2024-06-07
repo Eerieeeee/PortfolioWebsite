@@ -2,7 +2,7 @@ import * as THREE from 'https://github.com/Eerieeeee/PortfolioWebsite/three/buil
 
 // import mp4 from './background.mp4';
 
-import { GTLFLoader } from 'https://github.com/Eerieeeee/PortfolioWebsite/three/examples/jsm/loaders/GLTFLoader.js';
+import { GLTFLoader } from 'https://github.com/Eerieeeee/PortfolioWebsite/three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'https://github.com/Eerieeeee/PortfolioWebsite/three/examples/jsm/controls/OrbitControls.js';
 
 var scene, camera, cameraP, cameraF, renderer, controls, mouse, raycaster, selectedPiece = null;
