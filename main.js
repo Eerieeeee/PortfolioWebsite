@@ -95,7 +95,10 @@ renderer.render( scene, camera);
 //GTLF LOADER
 const modelLoader = new GLTFLoader(loadingManager);
 renderer.outputEncoding = THREE.sRGBEncoding;
-// renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1;
+
+
 
     modelLoader.load(
         'Models/Homepage_007.glb',
@@ -175,16 +178,23 @@ scene.add(skyMesh);
 scene.fog = new THREE.FogExp2(0x9E9759, 0.005);
 
 //LIGHTING
-const pointLight = new THREE.PointLight(0xEDE175, 10)
+// X back/right from camera, Y is up? z is forward?
+const pointLight = new THREE.PointLight(0xEDE175)
 pointLight.position.set(100, 20, 0)
 pointLight.castShadow = true;
 
-const pointLight2 = new THREE.PointLight(0xffffff, 10)
-pointLight2.position.set(-100, 20, 20)
+const pointLight2 = new THREE.PointLight(0xffffff, 100)
+pointLight2.position.set(1, 10, 10) 
 pointLight2.castShadow = true;
 
-const ambientLight = new THREE.AmbientLight(0x999999, 10)
-ambientLight.castShadow = true;
+const directionalLight = new THREE.DirectionalLight(0xffffff, 0.75);
+directionalLight.castShadow = true;
+directionalLight.position.set(2.36, 4.57, 8.98);
+
+scene.add(directionalLight);
+
+// const ambientLight = new THREE.AmbientLight(0x999999, 100)
+// ambientLight.castShadow = true;
 
 scene.add(pointLight, pointLight2)
 
@@ -255,8 +265,7 @@ window.addEventListener("keydown", (event) => {
 
 
 // //HELPERS
-    // const lightHelper = new THREE.PointLightHelper(pointLight)
-    // const lightHelper2 = new THREE.PointLightHelper(pointLight2)
+    
     // const gridHelper = new THREE.GridHelper(200, 50)
     // scene.add(lightHelper, lightHelper2, gridHelper)
 
