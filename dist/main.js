@@ -1,9 +1,9 @@
-import * as THREE from 'three';
+import * as THREE from 'dist/three';
 
 // import mp4 from './background.mp4';
 
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { OrbitControls } from 'dist/three/examples/jsm/controls/OrbitControls';
+import { GLTFLoader } from 'dist/three/examples/jsm/loaders/GLTFLoader';
 
 var scene, camera, cameraP, cameraF, renderer, controls, mouse, raycaster, selectedPiece = null;
 
