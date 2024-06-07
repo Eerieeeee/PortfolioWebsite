@@ -1,3 +1,6 @@
+header ('Access-Control-Allow-Origin: https://eerieeeee.github.io/PortfolioWebsite/');
+
+
 import * as THREE from 'https://github.com/Eerieeeee/PortfolioWebsite/three/build/three.module.js';
 
 // import mp4 from './background.mp4';

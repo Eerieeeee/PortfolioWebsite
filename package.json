@@ -2,7 +2,7 @@
   "name": "3d-website",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://eerieeeee.github.io/PortfolioWebsite/dist/index.html",
+  "homepage": "https://eerieeeee.github.io/PortfolioWebsite/index.html",
   "type": "module",
   "scripts": {
     "dev": "vite",
