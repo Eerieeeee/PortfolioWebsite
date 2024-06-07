@@ -3,7 +3,7 @@ import * as THREE from 'three';
 
 // import mp4 from './background.mp4';
 
-import { GTLFLoader } from './three/examples/jsm/loaders/GLTFLoader.js';
+import { GTLFLoader } from 'https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js';
 import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.165.0/examples/js/controls/OrbitControls.js';
 
 var scene, camera, cameraP, cameraF, renderer, controls, mouse, raycaster, selectedPiece = null;
