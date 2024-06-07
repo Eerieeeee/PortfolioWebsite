@@ -1,12 +1,12 @@
 header ('Access-Control-Allow-Origin: https://eerieeeee.github.io');
 
 
-import * as THREE from '../three/build/three.module.js';
+import * as THREE from 'three';
 
 // import mp4 from './background.mp4';
 
-import { GLTFLoader } from '../three/examples/jsm/loaders/GLTFLoader.js';
-import { OrbitControls } from '../three/examples/jsm/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 var scene, camera, cameraP, cameraF, renderer, controls, mouse, raycaster, selectedPiece = null;
 
