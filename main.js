@@ -3,8 +3,8 @@ import * as THREE from 'three';
 
 // import mp4 from './background.mp4';
 
-import { GTLFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { GTLFLoader } from './three/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from './three/examples/jsm/controls/OrbitControls';
 
 var scene, camera, cameraP, cameraF, renderer, controls, mouse, raycaster, selectedPiece = null;
 
