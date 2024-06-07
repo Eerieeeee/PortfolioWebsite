@@ -1,14 +1,9 @@
-header ('Access-Control-Allow-Origin: https://eerieeeee.github.io');
-
-
-import * as THREELib from 'three-js';
+import * as THREE from 'three';
 
 // import mp4 from './background.mp4';
 
-// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-
-var THREE = THREELib(["OrbitControls", "GLTFLoader"]);
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 var scene, camera, cameraP, cameraF, renderer, controls, mouse, raycaster, selectedPiece = null;
 
@@ -46,7 +41,7 @@ loadingManager.onLoad = function() {
     progressBarContainer.style.display = 'none';
     setTimeout(() => {
         controlsContainer.style.display = 'none';
-    }, 6000);  
+    }, 1);  
     }
 
 
@@ -103,7 +98,7 @@ renderer.outputEncoding = THREE.sRGBEncoding;
 // renderer.toneMapping = THREE.ACESFilmicToneMapping;
 
     modelLoader.load(
-        'Homepage_007.glb',
+        'Models/Homepage_007.glb',
         
         function(gltf) {
             scene.add( gltf.scene );
@@ -124,7 +119,7 @@ renderer.outputEncoding = THREE.sRGBEncoding;
 // ADDING VIDEO TEXTURE TO PLANE
 const video = document.getElementById('TV-Texture'); //define video as a const
 
-video.src="https://github.com/Eerieeeee/PortfolioWebsite/raw/main/Videos/TV-Texture.mp4";
+video.src="Videos/TV-Texture.mp4";
 video.load();
 video.play();
 const texture = new THREE.VideoTexture(video); //call the var video as a texture
@@ -146,7 +141,7 @@ scene.add(imageObject);
 // //FOOD COLLAGE VIDEO
 const foodVideo = document.getElementById('FoodCollage'); //define video as a const
 
-foodVideo.src="https://github.com/Eerieeeee/PortfolioWebsite/raw/main/Videos/FoodCollage.mp4";
+foodVideo.src="Videos/FoodCollage.mp4";
 foodVideo.load();
 foodVideo.play();
 const foodTexture = new THREE.VideoTexture(foodVideo); //call the var video as a texture
@@ -180,15 +175,15 @@ scene.add(skyMesh);
 scene.fog = new THREE.FogExp2(0x9E9759, 0.005);
 
 //LIGHTING
-const pointLight = new THREE.PointLight(0xEDE175, 0.1)
+const pointLight = new THREE.PointLight(0xEDE175, 10)
 pointLight.position.set(100, 20, 0)
 pointLight.castShadow = true;
 
-const pointLight2 = new THREE.PointLight(0xffffff, 0.1)
+const pointLight2 = new THREE.PointLight(0xffffff, 10)
 pointLight2.position.set(-100, 20, 20)
 pointLight2.castShadow = true;
 
-const ambientLight = new THREE.AmbientLight(0x999999, 1)
+const ambientLight = new THREE.AmbientLight(0x999999, 10)
 ambientLight.castShadow = true;
 
 scene.add(pointLight, pointLight2)
