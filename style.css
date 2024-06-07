@@ -1,0 +1,983 @@
+/* I found a font on Google Fonts, this is a source that finds the font type so i can use it */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+/* Not quite sure, but i think this is like creating variables that i can call later in the script */
+:root {
+  --nav-color: rgb(36, 37, 42);
+  --background-color: rgb(0, 0, 0);
+  --border-color: rgb(255,255,255,0.5);
+  --highlight-color: rgba(238, 217, 30, 0.8);
+  --button-color: rgb(199, 180, 9, 0.8);
+  --logo-light-color: rgb(238, 228, 140);
+}
+
+.controls-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(163, 157, 96);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ 
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(163, 157, 96);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#progress-bar {
+  width: 30%;
+  height: 2%;
+  margin-top: .5%;
+}
+
+label {
+  color: #fff;
+  font-size: 2rem;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+
+ /*Cannot remember what the * is but i'm sure i'll find out one day */
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+/* TEXT FORMATTING SCRIPTS ||||||| for grey change background colour to nav colour */
+body {
+  background-color: var(--background-color);
+  flex-direction: column;
+  height: 100vh;
+  margin: 0px;
+}
+
+main {
+  position: relative;
+  flex-grow: 1;
+}
+
+.wrapper{
+  width: 100%;
+}
+
+li, a, contactButton {
+  font-size:16px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #edf0f1;
+  text-decoration: none;
+  transition: opacity 400ms ease;
+}
+
+table{
+  border: 1px solid white;  
+  width: 100%;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+}
+
+projectButton{
+  margin-left: 60%;
+  margin-bottom: 10px;
+  display: block;
+  padding: 9px 1px;
+  width: 125px;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  text-align: center;
+}
+projectButton:hover{
+  background-color: var(--button-color);
+  color: black;
+}
+
+#download-link{
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color:aqua;
+  text-decoration: underline;
+}
+
+#backgroundVideo {
+  position: fixed;
+  width: auto;
+  height: auto;
+  max-width: 1371px;
+  max-height: 771px;
+  z-index: -1;
+}
+
+img {
+  width: auto;
+  height: auto;
+  max-width: 331px;
+  max-height: 155px;
+  border-radius: 15px;
+}
+
+figure{
+  padding-top: 24%;
+  height:fit-content;
+}
+
+figcaption{
+  font-family: "Roboto Condensed", sans-serif;
+  text-align: center;
+  color:white;
+  padding-left: 20%;
+}
+
+.about{
+  max-width: 400px;
+  max-height: 1300px;
+  border-radius: 15px;
+}
+
+.column.left.about {
+  /* width:100%; */
+  text-align: left;
+  padding-top: 45px;
+  padding-bottom: 50px;
+  padding-left: 2%;
+}
+
+.column.middle.about {
+  /* width:100%; */
+  text-align: left;
+  padding-top: 45px;
+  padding-bottom: 50px;
+  padding-left: 2%;
+}
+
+.column.right.about {
+  /* width:100%; */
+  text-align: left;
+  padding-top: 45px;
+  padding-bottom: 50px;
+  padding-left: 2%;
+}
+
+.about-container {
+  display: flex;
+}
+
+h1{
+  font-size: 20px;
+}
+h2{
+  font-size: 16px;
+}
+
+h5{
+  font-size: 18px;
+  color: rgb(238, 217, 30);
+  font-style: italic;
+}
+
+p{
+  font-size: 14px;
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+}
+
+ /* This allows me to customise each element listed below, e.g h1, h2, etc */
+ h1, h2, h3, h4, h5, p, span{
+  font-family: "Roboto Condensed", sans-serif;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.tab {
+  display: inline-block;
+  margin-left: 10em;
+}
+
+.tab-short {
+  display: inline-block;
+  margin-left: 6em;
+}
+
+ /* NAV BAR SCRIPTS */
+ nav {
+  display:flex;
+  top:0;
+  position: fixed;
+  background-color: var(--background-color);
+  width: 100%;
+  height: 10%;
+  z-index: 3;
+}
+
+/* Nav Bar Division Attributes Top of Screen*/
+nav > .nav-section {
+    padding: 2rem 1rem;
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+}
+
+/* Splits up the Nav Bar and calculates the space of each section */
+#nav-logo-section,
+#nav-link-section {
+  flex-basis: calc(100%/3);
+}
+
+#nav-logo-section {
+  justify-content: flex-start;
+}
+
+#nav-link-section {
+  border-left: 1px solid var(--border-color);
+  gap: 0rem;
+}
+
+#nav-contact-section {
+  border-left: 1px solid var(--border-color);
+}
+
+#article-nav-section{
+  gap: 3rem;
+}
+
+/* Customise logo settings */
+.logo{
+  margin-left: 60px;
+  transform: scale(3); 
+}
+
+/* rearranges the nav links to side by side */
+.nav__links{
+  columns: 2;
+  list-style: none;
+}
+
+.nav__links li{
+  display: inline-block;
+  padding: 0px 0px;
+}
+
+ /* creates the contact button */
+ contactButton{
+  padding: 9px 15px;
+  background-color: var(--button-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+/* changes the contact button colour when hovered over */
+contactButton:hover{
+   background-color: var(--highlight-color);
+}
+
+projectButton{
+  margin-left: 60%;
+  margin-bottom: 10px;
+  display: block;
+  padding: 9px 1px;
+  width: 125px;
+}
+
+.row{
+  width:100%;
+}
+
+.column {
+  padding-top: 25%;
+  float: left;
+}
+
+.column.left {
+  width:20%;
+  padding-right: 0%;
+  padding-left: 2%;
+  display: none;
+}
+
+.column.middle {
+  width:90%;
+  float:left;
+  text-align: left;
+  padding: 84px 20px 20px;
+  padding-bottom: 50px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.column.right {
+  width:20%;
+  padding-right: 2%;
+  padding-left: 5%;
+  display:none;
+}
+
+.icon-row{
+  width:100%;
+  text-align: center;
+  padding:1em 5%;
+  display:grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(4, minmax(60px, 1fr));
+}
+
+/* Program Logos */
+.icon-img {
+  width: 75%;
+  height: 100px;
+  object-fit: scale-down;
+}
+
+.gallery-container {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 50px, 8%; */
+}
+
+.gallery {
+  width:100%;
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 30px;
+}
+
+.gallery img{
+  width: 100%;
+}
+
+/* Tablet Size */
+@media screen and (min-width: 768px) {
+  .row{
+    width:100%;
+  }
+
+  img{
+    width: auto;
+    height: auto;
+    max-width: 480px;
+    max-height: 280px;
+  }
+
+  #backgroundVideo {
+    position: fixed;
+    width: auto;
+    height: auto;
+    max-width: 1920px;
+    max-height: 1080px;
+    z-index: -1;
+  }
+
+  h1{
+    font-size: 32px;
+  }
+  h2{
+    font-size: 24px;
+  }
+  p{
+    font-size: 18px;
+  }
+
+  h3{
+    font-size: 36px;
+    color: rgb(238, 217, 30);
+  }
+  
+  h4{
+    font-size: 26px;
+    color: rgb(238, 217, 30);
+  }
+
+  h5{
+    font-size: 20px;
+    color: rgb(238, 217, 30);
+  }
+ 
+
+  .floating.buttons {
+    position: fixed;
+    padding-top: 9%;
+    padding-left: 0%;
+  }  
+
+  .column {
+    padding-top: 17%;
+    float: left;
+  }
+  
+  .column.middle {
+    width:50%;
+    text-align: left;
+    padding-top: 1%;
+    padding-bottom: 50px;
+    padding-left: 2%;
+  }
+
+  .column.right{
+    display: initial;
+  }
+
+  /* NAV BAR SCRIPTS */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    /* border bottom doesnt actually work */
+    /* border-bottom: 1px solid(--highlight-color); */
+    background-color: var(--background-color);
+    z-index: 3;
+  }
+  
+  /* Nav Bar Division Attributes Top of Screen*/
+  nav > .nav-section {
+    padding: 2rem 2rem;
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Splits up the Nav Bar and calculates the space of each section */
+  #nav-logo-section,
+  #nav-link-section {
+    flex-basis: calc(100%/3);
+  }
+  #nav-contact-section {
+    border-left: 1px solid var(--border-color);
+    flex-grow: 1;
+    justify-content: center;
+  }
+  
+  #nav-logo-section {
+    justify-content: flex-start;
+  }
+  
+  #nav-link-section {
+    border-left: 1px solid var(--border-color);
+    gap: 6rem;
+  }
+  
+  #nav-contact-section {
+    justify-content: center;
+    gap: 3rem;
+  }
+  
+  #article-nav-section{
+    gap: 3rem;
+  }
+  
+  /* Customise logo settings */
+  .logo{
+    cursor: pointer;
+    transform: scale(4); 
+  }
+  
+  /* rearranges the nav links to side by side */
+  .nav__links{
+    list-style: none;
+  }
+  
+  .nav__links li{
+    display: inline-block;
+    padding: 0px 30px;
+  }
+  
+  .nav__links li a{
+    transition: all 0.3s ease 0s;
+  }
+  .nav__links li a:hover{
+    color: var(--highlight-color);
+  }
+  
+  /* creates the contact button */
+  contactButton{
+    padding: 9px 25px;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  /* changes the contact button colour when hovered over */
+  contactButton:hover{
+     background-color: var(--highlight-color);
+  }
+  
+  .column.left{
+    display: initial;
+    align-items: center;
+  }
+
+  projectButton{
+    margin-left: 10%;
+    margin-bottom: 10px;
+    display: block;
+    padding: 9px 1px;
+    width: 125px;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    text-align: center;
+  }
+  projectButton:hover{
+    background-color: white;
+    color: black;
+  }
+
+  topicButton{
+    margin-left: 20%;
+    margin-bottom: 10px;
+    display: block;
+    padding: 9px 1px;
+    width: 125px;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    text-align: center;
+  }
+  topicButton:hover{
+    background-color:white;
+    color: black;
+  }
+
+  .gallery-container {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 50px, 8%; */
+  }
+  
+  .gallery {
+    width:100%;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 30px;
+  }
+  
+  .gallery img{
+    width: 100%;
+  }
+}
+
+/* Desktop Size */
+@media screen and (min-width: 1000px) {
+  #backgroundVideo {
+    position: fixed;
+    width: auto;
+    height: auto;
+    max-width: 1920px;
+    max-height: 1080px;
+    z-index: -1;
+  }
+  /* scrollbar (not working rn) */
+  /* body {
+    overflow: scroll;
+  }
+
+  body::-webkit-scrollbar {
+    width: 20px;
+    z-index: 2;
+  }
+
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background: grey;
+  } */
+
+  img{
+    width: auto;
+    height: auto;
+    max-width: 640px;
+    max-height: 360px;
+  }
+
+  #gallery-text-section{
+    font-size: 58px;
+    text-align: center;
+  } 
+  
+  h1{
+    font-size: 26px;
+  }
+  /* This allows me to customise each element listed below, e.g h1, h2, etc */
+  h2, h3, p, span{
+    font-size: 24px;  
+  }
+  
+  h1, h2, h3, h4 {
+    font-weight: bold;
+  }
+  
+  h4 {
+    font-style:italic;
+    font-size: 18px;
+  }
+  
+  /* This allows me to customise each element listed below, e.g li, a, etc */
+  li, a, contactButton {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #edf0f1;
+    transition: opacity 400ms ease;
+  }
+  
+  li.bullet.list{
+    text-align: left;
+    list-style-position: inside;
+    list-style-type: square;
+    font-size: 22px;
+  }
+  
+  h3.skill.title {
+    text-align: left;
+  }
+    
+  /* Customise header */
+  section{
+    /* display: inline-block; */
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding:10px 10%;
+  }
+  
+  header{
+    /* display:block; */
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding:10px 10%;
+  
+  }
+  
+  /* Nav Bar Division Attributes Top of Screen*/
+  nav > .nav-section {
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Splits up the Nav Bar and calculates the space of each section */
+  #nav-logo-section,
+  #nav-link-section {
+    flex-basis: calc(100%/3);
+  }
+  #nav-contact-section {
+    flex-grow: 1;
+    justify-content: center;
+    gap: 3rem;
+  }
+  
+  #nav-logo-section {
+    justify-content: flex-start;
+  }
+  
+  #article-nav-section{
+    gap: 3rem;
+  }
+  
+  /* Customise logo settings */
+  .logo{
+    cursor: pointer;
+    transform: scale(4); 
+  }
+  
+  #nav-link-section {
+    border-left: 1px solid var(--border-color);
+    gap: 6rem;
+  }
+  
+  /* rearranges the nav links to side by side */
+.nav__links{
+  columns: 1;
+  list-style: none;
+}
+
+.nav__links li{
+  display: inline;
+  padding: 0px 30px;
+}
+
+.nav__links li a{
+  font-size: 16px;
+  transition: all 0.3s ease 0s;
+}
+.nav__links li a:hover{
+  color: var(--highlight-color);
+}
+  
+  /* creates the contact button */
+  contactButton{
+    padding: 9px 25px;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  /* changes the contact button colour when hovered over */
+  contactButton:hover{
+     background-color: var(--highlight-color);
+  }
+    
+  /*container and contents*/
+  .image-container{
+      padding-top: 40px;
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      align-content: center;
+  }
+  
+  .gallery-container {
+    display: flex;
+    padding: 50px, 8%;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding-top: 2%;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .gallery img{
+    object-fit: cover;
+    width:100%;
+  } 
+
+  section{
+    display:inline-flex;
+    flex-wrap: wrap;
+    gap:1em;
+    padding-top: 2%;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  section div{
+    flex:1 1 0;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:2em;
+  }
+
+  section div img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .item1 {
+    height:100hv;
+    width: 300px;
+    object-fit: cover;
+  }
+
+  .floating.buttons {
+    position: fixed;
+    padding-top: 9%;
+    padding-left: 12%;
+  }
+
+  .column {
+    padding-top: 9%;
+  }
+  
+  .column.left {
+    padding-left: 100px;
+    padding-right: 0%;
+    display:initial;
+    width: 25%;
+    align-items: center;
+  }
+  
+  .column.middle {
+    padding-top: 9%;
+    width:50%;
+    padding-bottom: 50px;
+  }
+  
+  .column.right {
+    width: 25%;
+    display: initial;
+  }
+
+  #myVideo {
+    width:640px;
+    height:360px;
+    border-radius:5px;
+    max-width:100%; height:auto;
+  }
+  
+  #myPlaylist {
+    width:100%;
+  }
+  
+  .popup{
+    background-color: var(--nav-color);
+    max-width:45%; height:auto;
+    padding: 10px 30px;
+    position: absolute;
+    transform: translate(-49%, 2665%);
+    left: 50%;
+    top: 2620px;
+    border-radius: 12px;
+    display: none;
+    z-index: 1;
+  }
+  
+  .popup button {
+    display: block;
+    margin: 0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .popup p{
+    text-align: justify;
+    margin: 20px 0px;
+  }
+
+  /* ABOUT PAGE SCRIPTS */
+body::-webkit-scrollbar{
+  display: none;
+}
+
+/* Program Logos */
+.icon-img {
+  width: 50%;
+  height: 100px;
+  object-fit: scale-down;
+  border-radius: 0px;
+}
+
+.icon-row{
+  justify-content: center;
+  text-align: center;
+  padding:1em 25%;
+  padding-bottom: 1em;
+  display:grid;
+  grid-gap: 8em;
+  grid-template-columns: 200px 200px 200px 200px 200px;
+  width:100%;
+}
+
+/* Fav games */
+.series-img {
+  width: 500px;
+  height: 225px;
+  object-fit: scale-down;
+}
+
+.row-images {
+  grid-gap: 3em;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+projectButton{
+  margin-left: 0%;
+  margin-bottom: 10px;
+  display: block;
+  padding: 9px 1px;
+  width: 125px;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  text-align: center;
+}
+projectButton:hover{
+  background-color: white;
+  color: black;
+}
+
+/* have paras beside each other instead of one after another */
+.float-container {
+  border: 3px;
+  padding: 20px;
+}
+
+.float-child{
+  width: 50%;
+  float: left;
+  padding: 20px;
+  border: 2px;
+}
+}
+
+@media screen and (min-width: 1460px){
+  .column.left{
+    padding-left: 200px;
+  }
+
+  h3{
+    font-size: 32px;
+    color: rgb(238, 217, 30);
+  }
+
+  h4{
+    font-size: 26px;
+    color: rgb(238, 217, 30);
+  }
+}

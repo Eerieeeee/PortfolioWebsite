@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpg" href="/Eerie_favicon.jpg" />
+    <title>Cabin Fever</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox.css">
+  </head>
+
+  <video id="backgroundVideo" autoplay loop muted poster="Images/CabinFeverFolder/Dorm.jpg" style="width:1920px; height:auto;">
+    <source src="https://github.com/Eerieeeee/PortfolioWebsite/raw/main/Videos/CabinFever.mp4" type="video/mp4">
+  </video>
+
+  <body>
+      <nav>
+        <div id="nav-logo-section" class="nav-section">
+          <img src="Images/Logo/Eerie_009.jpg" alt="logo" style="border-radius:0px;  height: 80px; width:auto;">
+        </div>
+        
+        <div id="nav-link-section" class="nav-section">
+            <ul class="nav__links">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./CV.html">About</a></li>
+              <li><a href="./Projects.html">Projects</a></li>
+              <li><a href="./Interests.html">Personal Interests</a></li>
+            </ul>
+        </div>
+
+        <div id="nav-contact-section" class="nav-section">
+          <a class="cta" href="Contact.html"><contactButton>Contact</contactButton></a>
+        </div>
+    </nav>
+
+    <div class="floating buttons">
+      <a class="cta" href="./P-RPD.html"><topicButton>Next Project</topicButton> </a>
+      <a class="cta" href="./P-NeonCity.html"><topicButton>Previous Project</topicButton> </a>
+      <a class="cta" href="./Projects.html"><topicButton>Back to Projects</topicButton> </a>
+    </div>
+    
+    <div class="row">
+      <div class="column left">
+      </div>
+      
+      <div class="column middle" style="background-color: rgba(0,0,0,0.8);">
+        <h3>Cabin Fever</h3>
+    
+        <h4>A Short Horror Experience focused on Sound</h4><br>
+        <p>
+         <strong><i>'Cabin Fever'</i></strong> was one of my 3rd year projects at the Glasgow School of Art and it was a project in <strong>collaboration with the Sound for the Moving Image</strong>, another course at the 
+         university. The primary focus being on <strong>implementing sound and utilising</strong> it in our game/project. I titled this project <strong>Cabin Fever</strong> due to it being <strong>made in lockdown</strong>, 
+         I used this as inspiration for the <strong>aim of the experience</strong> and made it the player's aim to <strong>escape from the building</strong> they were in by <strong>interacting with the environment</strong> to 
+         find a way out.<br>
+         <br>
+         For the <strong>interactive elements</strong>, the inspiration for the interactions and <strong>UI elements came from classic survival horror games</strong> like <i><strong>Resident Evil</strong> (Capcom)</i> and also <i><strong>Silent Hill</strong> (Konami)</i>.
+        </p>
+
+        <br>
+        <img src="Images/CabinFeverFolder/Dorm.jpg" alt="Main Menu Background for Cabin Fever" style="width:640px;height:360px; border-radius: 15px;"><br>
+        
+        <p>
+          <strong>Genre:</strong> <i>Horror Survival, First-Person</i><br>
+          <strong>Engine:</strong> <i>Unity</i><br>
+          <strong>Development Period:</strong> <i>6 Weeks</i><br>
+          <strong>Platform:</strong> <i>PC</i><br>
+          <br>
+        </p>
+
+        <p>
+          <h4>Art Direction</h4><br>
+          <p>
+          I was inspired by <strong>Survival Horror</strong>, creepy ominous atmospheres, having a <strong>feeling of unease</strong>. Taking inspiration for the location from <i><strong>Resident Evil - Code: Veronica</strong> (Capcom)</i>.<br>
+          
+          This was more of a <strong>technical project for me</strong>, due to some previous projects needing extra time on the coding side, I wanted to make sure that I was able to <strong>complete all of the code</strong>, 
+          <strong>post processing</strong> and <strong>interactions</strong> as well as implementing the <strong>sound and menus</strong> correctly.<br>
+
+          <br>
+          <img src="Images/CabinFeverFolder/Render_003.jpg" alt="Render of the Dorm Room" style="width:640px;height:360px; border-radius: 15px;"><br>
+
+          <br>
+          <h4>Documentation</h4><br>
+
+          <br>
+          <h5>Simulation</h5><br><p>
+          I took this opportunity to look at <strong>Cloth Simulation</strong> in order to create <strong>bedsheets and pillows</strong>. In order to <strong>get as much experience</strong> with the bedsheets as possible 
+          and also to make the environment <strong>look more natural</strong>, I simulated and animated <strong>all of the bedsheets individually</strong>, for each bed instead of simply making one and copy-pasting it 
+          around the dorm room.<br>
+
+          The process of this took some <strong>trial and error</strong> to get it right and to a standard that I was happy with. I spent some time <strong>playing around with the material presets</strong> in the 
+          Cloth Modifier in 3ds Max to see <strong>how they affected the bedsheet</strong> as it landed on the bed. I found that for the most best result, the <strong>Cotton Preset </strong>was actually very nicely set up so I used them with 
+          minor tweaks to the <strong>Bends and the Density</strong> of the sheets.<br>
+
+          <br>
+          <img src="Images/CabinFeverFolder/ClothSettings.jpg" alt="Silent Hill UI Example" style="border-radius: 15px;"><br>
+          <h5>Cloth settings</h5><br><p>
+          </p>
+          <p>
+          <br>
+          These are the settings I used for the sheets;<br>
+          <br>
+              <li class="bullet list"><strong>Adding all the objects</strong> that the bedsheet would <strong>collide with</strong> to make sure colliders were set up correctly. (top left)<br>
+              </li>
+              <br>
+              <li class="bullet list">Editing the <strong>Offset of the Object</strong> to 0.1 so that it <strong>would not clip through itself</strong>. (middle right)<br>
+              </li>
+              <br>
+              <li class="bullet list">Enabling and <strong>changing Collision Object values</strong> to around 0.3 so that the bedsheet did not clip through the walls, mattress or pillow, but still 
+                draped over them all correctly. (bottom right)<br>
+              </li>
+          
+            </p>
+          <p>
+          <br>
+          <strong>For the pillow</strong> I used very similar settings for as the sheet, except I used the <strong>Pressure value</strong> and played with the values to get a <strong>good amount of volume</strong> to the pillow. 
+          I also had to <strong>disable the gravity</strong> when simulating this.<br>
+          Most of this process was a lot of trial and error as I learned how the ins and outs of the Cloth Modifier worked exactly to get the best results.<br>
+          
+          </p>
+          <p>
+          <br>
+          <h5>Animating</h5><br><p>
+          When it came to animating the sheet, <strong>I created a Dummy</strong> that I would then <strong>Soft Selection to select what vertices</strong> of the bedsheet I wanted to <strong>connect to a Node</strong> which 
+          would be connected to the Dummy, as the <strong>Dummy would allow me to animate</strong> and move the <strong>bedsheet</strong> during the simulation. For the animiation itself, I simulated the bedsheet falling onto the
+          bed then once it was finished I scrubbed through the timeline until I found a point that the bedsheet had come to a stop.<br>
+          From here I then <strong>Truncated the frames after this point</strong> and began to <strong>move the Dummy slowly</strong> and while using auto-key. I moved the corner of the sheet until it was in a position
+          that when I detached it from the Dummy, it would <strong>fall back down on itself</strong> and the end result would look like someone had gotten out of bed and pulled the sheet over. For this part I had to
+           <strong>ensure that I had set up all of
+          the self-collision properly</strong>  so that the bedsheet wasn't clipping through itself.<br>
+        
+          <br>
+          <img src="Images/CabinFeverFolder/Bedsheets.jpg" alt="Silent Hill UI Example" style="border-radius: 15px;"><br>
+          <i>Early testing of the bedsheets.<br></i>
+          
+          <br>
+          <img src="Images/CabinFeverFolder/Dorm Example.jpg" alt="Close up of Bedsheets" style="border-radius: 15px;"><br>
+          <i>This was the final outcome of a couple of the beds.<br></i>
+          </p>
+          <p>
+          <br>
+          <h5>Audio</h5><br><p>
+          I <strong>collected sound for the game from around my house</strong>. Trying to find as many unique sounds as I could and then planning what models that they could be used on, using things such as different 
+          <strong>doors for creaking, taps cookers, ovens and more, even trying to get a suitable walking sound</strong> for the project. After modelling and designing the environment I then began to make as 
+          many of the <strong>objects interactable</strong> as I could within the time frame.<br>
+
+          <br>
+          I uploaded all of the collected sounds from my phone to Google Drive and then <strong> began to edit them in Adobe Audition to remove background noise</strong> and to also clip the audio to a better length. Really just any small tweaks that each
+          sound clip might have needed.<br>
+
+          <br>
+          <h5>Interaction</h5><br><p>
+          Upon interacting with objects in the environment, a <strong>UI will pop up displaying some information</strong> and play the relating audio that I had recorded from around my house.<br>
+
+          <br>
+          <img src="Images/CabinFeverFolder/CabinFeverUI.jpg" alt="Silent Hill UI Example" style="border-radius: 15px;"><br>
+          
+            UI from <i><strong>Silent Hill</strong> (Konami)</i>
+              &emsp;&emsp;&emsp;&ensp;
+            Cabin Fever UI<br>
+          
+        </p>
+            <p>
+              <br>
+              <h4>Unity Implementation</h4><br><p>
+
+              <br>
+              <img src="Images/CabinFeverFolder/CabinFever.jpg" alt="Kitchen_001.png" style="width:640px;height:360px; border-radius: 15px;"><br>
+              <i>In game screnshots of the project.</i></p>
+              
+              <p>
+              <br>
+              <h5>Sound</h5><br><p>
+                <strong>After editing all the sound clips</strong> to the desired lengths, I then began implementing them into Unity along with the <strong>animations for things like the door swinging open</strong>.
+              I then made any final adjustments to the animation and the sound clip so that <strong>the timing of the door swinging with the audio would sync up</strong>  nicely and seem 
+              realistic and fluid.<br>
+              I did this for all audio clips as well as for the <strong>particle effects of the shower and the tap</strong>, making sure they were all synced up.
+              
+
+              <p>
+              <br>
+              <h5>Particle System & Post Processing</h5><br><p>
+              Another area that I wished to <strong>develop my skills</strong> in was with <strong>Unity's Particle System</strong> since I had only used it once or twice in the past.
+              To make the Cabin <strong>feel old and abandonned</strong> I created a <strong>dust particle effect falling from the rafters overhead</strong>.<br>
+
+              <br>
+              <video width="480" height="280" controls>
+                <source src="Videos/CF_Audio.mp4" type="video/mp4">
+              </video><br>
+              <i>Different clips of the audio in game with their respective models.</i>
+            </p>
+            <p>
+              <br>
+              On top of this I took the time to learn how to create a <strong>water particle effect</strong> that would come out of the <strong>taps and shower and collide with the surrounding models</strong> to make it look more realistic.
+              It was something I had never done before and I feel it was a simple but effective way to get some <strong>more experience using Unity's Particle System</strong>. 
+            </p>
+           
+
+              <br>
+              <h4>Self-Reflection</h4><br>
+              <p>
+              <br>
+              Areas that I believe that I did well on during the process of this project;<br>
+                
+              <br>
+              <li class="bullet list">I feel like taking the time to learn some of <strong>3DS Max's Cloth simulator was a really useful technique</strong> for
+                me to learn. I am really happy with the outcome of the pillows and the bedsheets and there was no way I
+                would have been able to model them by hand or as quickly as I did without learning how to use the modifier.
+                Learning this will really help boost parts of my work in the future when dealing with cloth like materials.<br>
+                However as it was my first time using the modifier and learning how to create and animate sheets, I went 
+                slightly overboard with the poly count and this is something that I will rectify going forward and use sufficient
+                smoothing groups to achieve the same outcome with a lot less polys.<br>
+              </li><br>
+              
+              <li class="bullet list">With the <strong>combination of sound, post-processing and lighting</strong> that I created, I was successful in
+                making an <strong>unsettling atmosphere</strong> in the Cabin that I am really happy with.<br>
+                Having the dimly lit Cabin with <strong>broken appliances, the creaking of the door, a soft light</strong> coming in a couple
+                of the windows from the Moon, really helped emphasise the <strong>abandonned feeling</strong> that I was aiming to establish
+                in this project.
+              </li><br>
+        
+              <li class="bullet list">Having put in <strong>extra time</strong> and practice to the <strong>coding and Unity side</strong> of my projects in third year of university, I 
+                was really starting to see the <strong>vast improvement</strong> that this effort was having <strong>on my work</strong> as a whole. I understand that a lot of the mechanics
+                for this project are really simple, but I was able to create a much more <strong>immersed feeling </strong>with this project because I was a lot better when it
+                came to polishing up the Unity aspects.
+              </li><br>
+            </p>
+
+            <p>
+              <br>
+              These are some areas that I believe I could improve upon.<br>
+
+              <br>
+              <li class="bullet list">For me, this project was more of a technical project. Between developing skills in areas that I had only slightly used before, such as the Particle Systems, Post Processing, as well as developing new skills
+                with Cloth Simulation and the time it took to animate and simulate the animations, <strong>I wasn't as creative with the environment as I would have liked to have been</strong>, as the majority
+                of the environment is heavily inspired from <i><strong>Resident Evil - Code: Veronica</strong> (Capcom)</i>.<br>
+                However I know that if I had been more creative with the environment I would not have been able to have the Unity side of the project as polished as it was within the time allocated for this project.<br>
+              </li><br>
+
+              <li class="bullet list">One slight shortcoming I had during this project was my textures on 2 objects, the cooker and the TV on the raised platform near the front door. Due to spending a lot of time focusing on learning new 
+                techniques for this project, <strong>I did not give myself time to fix the texture problems</strong> these slightly more complicated models had. I was yet to be made aware of how to properly utilise texture groups and I thought that I knew how
+                to properly use them up until this point.<br>
+                However, thankfully this is something I quickly learned from and solved after the project was complete and <strong>it is an error that I have not made since</strong>.<br> 
+              </li><br>
+
+              <li class="bullet list">I really wish I had more time for this project, as some parts of the environment <strong>feel slightly empty</strong>. Little things like having <strong>plates, cutlery mugs and maybe magazines</strong> or
+                newspapers on the tables to fill them up a little bit more. As well as having <strong>items on the Bookshelf as well </strong>as the table near the showers. Apart from this I was proud at the quality of the models I created
+                for this project.<br>
+                On top of making the environment seem more full, I wish I had created more unique dialogues to appear, for example, like how if the player interacts with the cooker it says <i>"Hmm... sounds like the pilot is broken."</i>
+              </li><br>
+            </p>
+
+            <br>
+            
+            <a id="btnScrollToTop" class="cta"><projectButton>Scroll To Top</projectButton> </a>
+
+            <br>
+            <br>
+            <p style="font-size: 16px;">© All rights reserved</p>
+            
+          </div>
+          
+          <div class ="column right">
+            <h4>Third Year</h4>
+            <h5>Year 2021</h5>
+          </div>
+          
+          <section class="masonry">
+            <div class="column-one">
+              <a href="Images/CabinFeverFolder/ClothSettings.jpg" data-lightbox="Pictures" data-title="Cloth Settings in 3ds Max">
+                <img src="Images/CabinFeverFolder/ClothSettings.jpg" style="border-radius: 15px; width:auto;">
+              </a>        
+            </div>
+              
+            <div class="column-two">
+              <a href="Images/CabinFeverFolder/Bedsheets.jpg" data-lightbox="Pictures" data-title="Test of the Bedsheets">
+                <img src="Images/CabinFeverFolder/Bedsheets.jpg" style="border-radius: 15px;">
+              </a>
+
+              <a href="Images/CabinFeverFolder/Dorm Example.jpg" data-lightbox="Pictures" data-title="Bed Close Up">
+                <img src="Images/CabinFeverFolder/Dorm Example.jpg" style="border-radius: 15px;">
+              </a>
+            </div>
+          
+            <div class="column-three">
+              <a href="Images/CabinFeverFolder/Render_001.jpg" data-lightbox="Pictures" data-title="Render 001 of Cabin">
+                <img src="Images/CabinFeverFolder/Render_001.jpg" style="border-radius: 15px;">
+              </a>
+
+              <a href="Images/CabinFeverFolder/Render_002.jpg" data-lightbox="Pictures" data-title="Render 002 of Cabin">
+                <img src="Images/CabinFeverFolder/Render_002.jpg" style="border-radius: 15px;">
+              </a>
+
+              <a href="Images/CabinFeverFolder/Render_003.jpg" data-lightbox="Pictures" data-title="Render 003 of Cabin">
+                <img src="Images/CabinFeverFolder/Render_003.jpg" style="border-radius: 15px;">
+              </a>
+
+              <a href="Images/CabinFeverFolder/Render_005.jpg" data-lightbox="Pictures" data-title="Render 003 of Cabin">
+                <img src="Images/CabinFeverFolder/Render_005.jpg" style="border-radius: 15px;">
+              </a>
+            </div>
+                    
+            <div class="column-four">
+              <a href="Images/CabinFeverFolder/CabinFeverUI.jpg" data-lightbox="Pictures" data-title="UI inspiration and example">
+                <img src="Images/CabinFeverFolder/CabinFeverUI.jpg" style="border-radius: 15px;">
+              </a> 
+
+              <a href="Images/CabinFeverFolder/CabinFever.jpg" data-lightbox="Pictures" data-title="Different shots from the Cabin">
+                <img src="Images/CabinFeverFolder/CabinFever.jpg" style="border-radius: 15px;">
+              </a>
+
+              <a href="Images/CabinFeverFolder/Dorm.jpg" data-lightbox="Pictures" data-title="Main Menu Image">
+                <img src="Images/CabinFeverFolder/Dorm.jpg" style="border-radius: 15px;">
+              </a>
+            </div>
+          </section>
+
+    <script>
+      const btnScrollToTop = document.querySelector("#btnScrollToTop");
+      
+      btnScrollToTop.addEventListener("click", function () {
+        window.scrollTo(0, 0);
+      });
+    </script>
+
+    <script src="lightbox-plus-jquery.js"></script>
+
+    <script>
+      document.body.style.overflow="none";
+    </script>
+  </body>
+</html>
