@@ -1,5 +1,5 @@
-// import * as THREE from 'https://cdn.jsdelivr.net/npm/three@v0.165.0/build/three.module.js';
-import * as THREE from 'three';
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@v0.165.0/build/three.module.js';
+// import * as THREE from 'three';
 
 // import mp4 from './background.mp4';
 
