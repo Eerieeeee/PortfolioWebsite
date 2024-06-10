@@ -90,48 +90,48 @@ renderer.toneMappingExposure = 1;
         )
 
 // ADDING VIDEO TEXTURE TO PLANE
-const video = document.getElementById('TV-Texture'); //define video as a const
+// const video = document.getElementById('TV-Texture'); //define video as a const
 
-video.src="Videos/TV-Texture.mp4";
-video.load();
-video.play();
-const texture = new THREE.VideoTexture(video); //call the var video as a texture
-texture.needsUpdate; //refresh/update the video - like in animation
-texture.minFilter = THREE.LinearFilter;
-texture.magFilter = THREE.LinearFilter;
-texture.format = THREE.RGBAFormat;
-texture.crossOrigin = 'anonymous';
+// video.src="Videos/TV-Texture.mp4";
+// video.load();
+// video.play();
+// const texture = new THREE.VideoTexture(video); //call the var video as a texture
+// texture.needsUpdate; //refresh/update the video - like in animation
+// texture.minFilter = THREE.LinearFilter;
+// texture.magFilter = THREE.LinearFilter;
+// texture.format = THREE.RGBAFormat;
+// texture.crossOrigin = 'anonymous';
 
-var imageObject = new THREE.Mesh(
-    new THREE.PlaneGeometry(9.45,5.5),
-    new THREE.MeshBasicMaterial({map: texture, side: THREE.FrontSide, toneMapped: false}),);
+// var imageObject = new THREE.Mesh(
+//     new THREE.PlaneGeometry(9.45,5.5),
+//     new THREE.MeshBasicMaterial({map: texture, side: THREE.FrontSide, toneMapped: false}),);
 
-imageObject.position.set(7.15, 6.9,  4.95)
-imageObject.rotation.set(0,-0.7,0)
+// imageObject.position.set(7.15, 6.9,  4.95)
+// imageObject.rotation.set(0,-0.7,0)
 
-scene.add(imageObject);
+// scene.add(imageObject);
 
-// //FOOD COLLAGE VIDEO
-const foodVideo = document.getElementById('FoodCollage'); //define video as a const
+// // //FOOD COLLAGE VIDEO
+// const foodVideo = document.getElementById('FoodCollage'); //define video as a const
 
-foodVideo.src="Videos/FoodCollage.mp4";
-foodVideo.load();
-foodVideo.play();
-const foodTexture = new THREE.VideoTexture(foodVideo); //call the var video as a texture
-foodTexture.needsUpdate; //refresh/update the video - like in animation
-foodTexture.minFilter = THREE.LinearFilter;
-foodTexture.magFilter = THREE.LinearFilter;
-foodTexture.format = THREE.RGBAFormat;
-foodTexture.crossOrigin = 'anonymous';
+// foodVideo.src="Videos/FoodCollage.mp4";
+// foodVideo.load();
+// foodVideo.play();
+// const foodTexture = new THREE.VideoTexture(foodVideo); //call the var video as a texture
+// foodTexture.needsUpdate; //refresh/update the video - like in animation
+// foodTexture.minFilter = THREE.LinearFilter;
+// foodTexture.magFilter = THREE.LinearFilter;
+// foodTexture.format = THREE.RGBAFormat;
+// foodTexture.crossOrigin = 'anonymous';
 
-var foodObject = new THREE.Mesh(
-    new THREE.PlaneGeometry(5.05, 2.84),
-    new THREE.MeshBasicMaterial({map: foodTexture, side: THREE.FrontSide, toneMapped: false}),);
+// var foodObject = new THREE.Mesh(
+//     new THREE.PlaneGeometry(5.05, 2.84),
+//     new THREE.MeshBasicMaterial({map: foodTexture, side: THREE.FrontSide, toneMapped: false}),);
 
-foodObject.position.set(15, 7.97, -8.67)
-foodObject.rotation.set(0,0.07,0)
+// foodObject.position.set(15, 7.97, -8.67)
+// foodObject.rotation.set(0,0.07,0)
 
-scene.add(foodObject);
+// scene.add(foodObject);
 
 //SKYBOX
 const skyMesh = new THREE.Mesh(
