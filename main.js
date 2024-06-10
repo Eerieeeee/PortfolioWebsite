@@ -81,12 +81,11 @@ renderer.toneMappingExposure = 1;
         },
         function (xhr) {
             console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-        }
-        // ,
+        },
         
-        // function(error) {
-        //     console.log('An error happened');
-        // }
+        function(error) {
+            console.log('An error happened', error);
+        }
         
         )
 
