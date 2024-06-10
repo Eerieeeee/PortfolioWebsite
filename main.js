@@ -65,7 +65,7 @@ camera.position.set(-10, 25, 50);
 renderer.render( scene, camera);
 
 //GTLF LOADER
-// const modelLoader = new GLTFLoader(loadingManager);
+const modelLoader = new GLTFLoader(loadingManager);
 renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1;
