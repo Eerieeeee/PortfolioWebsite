@@ -92,7 +92,7 @@ renderer.toneMappingExposure = 1;
 
 
     modelLoader.load(
-        'Models/Homepage_007.glb',
+        'https://github.com/Eerieeeee/PortfolioWebsite/raw/main/Models/Homepage_007.glb',
         
         function(gltf) {
             scene.add( gltf.scene );
