@@ -1,4 +1,4 @@
-import * as THREE from './three';
+// import * as THREE from './three';
 // import { GLTFLoader } from './GLTFLoader.js';
 // import { OrbitControls } from './OrbitControls.js';
 
