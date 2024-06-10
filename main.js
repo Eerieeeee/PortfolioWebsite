@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-// import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 var scene, camera, renderer, controls, mouse, raycaster, selectedPiece = null;
 
@@ -70,24 +70,24 @@ renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1;
 
-    // modelLoader.load(
-    //     'public/Homepage_007.glb',
+    modelLoader.load(
+        'public/Homepage_007.glb',
         
-    //     function(gltf) {
-    //         scene.add( gltf.scene );
-    //         gltf.scene.position.set(-7.5, 0, 0)
-    //         gltf.scene.scale.set(12, 12, 12)
-    //         gltf.scene.rotation.set(0, -0.70, 0)
-    //     },
-    //     function (xhr) {
-    //         console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-    //     },
+        function(gltf) {
+            scene.add( gltf.scene );
+            gltf.scene.position.set(-7.5, 0, 0)
+            gltf.scene.scale.set(12, 12, 12)
+            gltf.scene.rotation.set(0, -0.70, 0)
+        },
+        function (xhr) {
+            console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+        },
         
-    //     function(error) {
-    //         console.log('An error happened', error);
-    //     }
+        function(error) {
+            console.log('An error happened', error);
+        }
         
-    //     )
+        )
 
 // ADDING VIDEO TEXTURE TO PLANE
 const video = document.getElementById('TV-Texture'); //define video as a const
