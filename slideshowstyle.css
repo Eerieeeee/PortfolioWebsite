@@ -326,7 +326,7 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 400px) {
 
     /* creates the contact button */
     contactButton{
@@ -353,12 +353,12 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
 
     /* Nav Bar Division Attributes Top of Screen*/
     nav > .nav-section {
-        padding: 2rem 2rem;
+        padding: 1rem 1rem;
         display: flex;
         gap: 1rem;
         border-bottom: 1px solid var(--border-color);
-        align-items: center;
-        justify-content: center;
+        align-items: left;
+        justify-content: left;
     }
   
     /* Splits up the Nav Bar and calculates the space of each section */
@@ -389,7 +389,7 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   
   .nav__links li{
     display: inline-block;
-    padding: 0px 30px;
+    padding: 0px 10px;
   }
 
   main > article {
@@ -433,6 +433,10 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
         font-size: 1rem;
         flex-grow: 1;
 
+    }
+    .logo{
+        margin-left: 20px;
+        transform: scale(2); 
     }
 }
 
