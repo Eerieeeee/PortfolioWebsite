@@ -38,9 +38,6 @@ loadingManager.onLoad = function() {
     }, 60);  
     }
 
-// setup Raycast
-// raycaster = new THREE.Raycaster();
-// mouse = new THREE.Vector2();
 
 function onPointerMove (event){
     //calculates the pointers position in a normalized device coordinates
@@ -50,22 +47,6 @@ function onPointerMove (event){
     mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
 }
 
-// function resetMaterials() {
-//     for ( let i = 0; i < scene.children.length; i++ ) {
-//         if (scene.children[i].material) {
-//             scene.children[i].material.opacity = scene.children[i] == selectedPiece ? 0.5 : 1.0;
-//         }
-//     }
-// }
-
-// function onClick( ){
-//     raycaster.setFromCamera(mouse, camera);
-//     let intersects = raycaster.intersectObjects(scene.children);
-//     if (intersects.length > 0) {
-//         selectedPiece = intersects[0].object;
-//     }
-
-// }
 
 //creates renderer
 renderer = new THREE.WebGLRenderer({
@@ -248,8 +229,6 @@ window.addEventListener("keydown", (event) => {
 
 //LEARNED BUT UNUSED
 
-
-
 //BACKGROUND TEXTURE
 // const backgroundTexture = new THREE.TextureLoader().load("Images/Spain/Cocktails.jpg");
 
@@ -301,6 +280,28 @@ window.addEventListener("keydown", (event) => {
 
 
 // RAYCASTER CHECK
+    
+// setup Raycast
+// raycaster = new THREE.Raycaster();
+// mouse = new THREE.Vector2();
+
+// function resetMaterials() {
+//     for ( let i = 0; i < scene.children.length; i++ ) {
+//         if (scene.children[i].material) {
+//             scene.children[i].material.opacity = scene.children[i] == selectedPiece ? 0.5 : 1.0;
+//         }
+//     }
+// }
+
+// function onClick( ){
+//     raycaster.setFromCamera(mouse, camera);
+//     let intersects = raycaster.intersectObjects(scene.children);
+//     if (intersects.length > 0) {
+//         selectedPiece = intersects[0].object;
+//     }
+
+// }
+
     // checks to see if the mouse is over an object and makes the object transparent
     // function hoverPieces() {
 
