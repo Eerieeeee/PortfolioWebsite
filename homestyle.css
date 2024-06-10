@@ -37,19 +37,6 @@ main {
   padding: 0;
 }
 
-.progress-bar-container, .controls-container {
-  width:1920px; 
-  height:1080px; 
-  background-color: rgb(163, 157, 96);
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  display: flex;
-  position: fixed;
-  top: 0%;
-}
-
-
 /* This allows me to customise each element listed below, e.g h1, h2, etc */
 h1, h2, h3, h4, p, span{
   font-family: "Roboto Condensed", sans-serif;
@@ -177,6 +164,20 @@ contactButton:hover{
     background-color: rgb(21, 19, 154);
   }
 
+}
+
+@media screen and (min-width: 1000px) {
+  .progress-bar-container, .controls-container {
+    width:1920px; 
+    height:1080px; 
+    background-color: rgb(163, 157, 96);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    position: fixed;
+    top: 0%;
+  }
 }
 
 /* ABOUT PAGE SCRIPTS */
