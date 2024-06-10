@@ -35,7 +35,7 @@ loadingManager.onLoad = function() {
     progressBarContainer.style.display = 'none';
     setTimeout(() => {
         controlsContainer.style.display = 'none';
-    }, 60);  
+    }, 6000);  
     }
 
 
