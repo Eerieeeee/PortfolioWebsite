@@ -1,6 +1,6 @@
 import * as THREE from "three";
-import { OrbitControls } from "./OrbitControls.js";
-import { GLTFLoader } from "./GLTFLoader.js";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 var scene, camera, renderer, controls, mouse, raycaster, selectedPiece = null;
 

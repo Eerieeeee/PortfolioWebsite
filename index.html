@@ -5,8 +5,20 @@
     <link rel="icon" type="image/jpg" href="Images/Logo/Eerie_favicon.jpg" />
     <title>Eerie's Portfolio Website</title>
     <meta name="viewport" content="width=device-width">
+  <script async src="https://ga.jspm.io/npm:es-module-shims@1.5.1/dist/es-module-shims.js" crossorigin="anonymous"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.157.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.157.0/examples/jsm/"
+      }
+    }
+  </script>
+
   <link rel="stylesheet" href="./homestyle.css">
+
   </head>
+  
     <nav style="z-index: 1; background-color: black;">
       <div id="nav-logo-section" class="nav-section" style="z-index: 1; background-color: black;">
         <img src="Images/Logo/Eerie_009.jpg" alt="logo" style="border-radius:0px;  height: 80px; width:auto;">
@@ -52,9 +64,6 @@
   </main>
         <video crossorigin="anonymous" id="TV-Texture" playsinline webkit-playsinline muted loop autoplay width="320" height="240" src="public/TV-Texture.mp4" style="display: none;" type="mp4"></video>
         <video crossorigin="anonymous" id="FoodCollage" playsinline webkit-playsinline muted loop autoplay width="320" height="240" src="public/FoodCollage.mp4" style="display: none;" type="mp4"></video>
-        <script type="module" src="./three.js"></script>
-        <script type="module" src="./OrbitControls.js"></script>
-        <script type="module" src="./GLTFLoader.js"></script>
         <script type="module" src="./main.js"></script>
   </body>
 </html>
