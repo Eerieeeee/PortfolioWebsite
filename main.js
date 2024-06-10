@@ -70,8 +70,6 @@ renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1;
 
-
-
     modelLoader.load(
         'Models/Homepage_007.glb',
         
@@ -191,13 +189,9 @@ renderer.setPixelRatio(0.6);
 
 function animate () {
     controls.update();
-    // resetMaterials();
-    // hoverPieces();
 
     renderer.render( scene, camera);
     requestAnimationFrame(animate);
-
-    // console.log(camera.rotation);
 }
 
 // //calls the animate function
