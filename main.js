@@ -65,29 +65,29 @@ camera.position.set(-10, 25, 50);
 renderer.render( scene, camera);
 
 //GTLF LOADER
-const modelLoader = new GLTFLoader(loadingManager);
+// const modelLoader = new GLTFLoader(loadingManager);
 renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1;
 
-    modelLoader.load(
-        'public/Homepage_007.glb',
+    // modelLoader.load(
+    //     'public/Homepage_007.glb',
         
-        function(gltf) {
-            scene.add( gltf.scene );
-            gltf.scene.position.set(-7.5, 0, 0)
-            gltf.scene.scale.set(12, 12, 12)
-            gltf.scene.rotation.set(0, -0.70, 0)
-        },
-        function (xhr) {
-            console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-        },
+    //     function(gltf) {
+    //         scene.add( gltf.scene );
+    //         gltf.scene.position.set(-7.5, 0, 0)
+    //         gltf.scene.scale.set(12, 12, 12)
+    //         gltf.scene.rotation.set(0, -0.70, 0)
+    //     },
+    //     function (xhr) {
+    //         console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+    //     },
         
-        function(error) {
-            console.log('An error happened', error);
-        }
+    //     function(error) {
+    //         console.log('An error happened', error);
+    //     }
         
-        )
+    //     )
 
 // ADDING VIDEO TEXTURE TO PLANE
 const video = document.getElementById('TV-Texture'); //define video as a const
