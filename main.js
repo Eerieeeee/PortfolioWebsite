@@ -1,6 +1,6 @@
 import * as THREE from './three';
-import { GLTFLoader } from './GLTFLoader.js';
-import { OrbitControls } from './OrbitControls.js';
+// import { GLTFLoader } from './GLTFLoader.js';
+// import { OrbitControls } from './OrbitControls.js';
 
 // import mp4 from './background.mp4';
 
