@@ -38,12 +38,6 @@ loadingManager.onLoad = function() {
     }, 60);  
     }
 
-<<<<<<< HEAD
-=======
-// setup Raycast
-// raycaster = new THREE.Raycaster();
-// mouse = new THREE.Vector2();
->>>>>>> parent of 44b6c2b (Add files via upload)
 
 function onPointerMove (event){
     //calculates the pointers position in a normalized device coordinates
@@ -53,25 +47,6 @@ function onPointerMove (event){
     mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
 }
 
-<<<<<<< HEAD
-=======
-// function resetMaterials() {
-//     for ( let i = 0; i < scene.children.length; i++ ) {
-//         if (scene.children[i].material) {
-//             scene.children[i].material.opacity = scene.children[i] == selectedPiece ? 0.5 : 1.0;
-//         }
-//     }
-// }
-
-function onClick( ){
-    raycaster.setFromCamera(mouse, camera);
-    let intersects = raycaster.intersectObjects(scene.children);
-    if (intersects.length > 0) {
-        selectedPiece = intersects[0].object;
-    }
-
-}
->>>>>>> parent of 44b6c2b (Add files via upload)
 
 //creates renderer
 renderer = new THREE.WebGLRenderer({
@@ -95,15 +70,8 @@ renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1;
 
-<<<<<<< HEAD
     modelLoader.load(
         'Models/Homepage_007.glb',
-=======
-
-
-    modelLoader.load(
-        'https://github.com/Eerieeeee/PortfolioWebsite/raw/main/Models/Homepage_007.glb',
->>>>>>> parent of 44b6c2b (Add files via upload)
         
         function(gltf) {
             scene.add( gltf.scene );
@@ -221,19 +189,9 @@ renderer.setPixelRatio(0.6);
 
 function animate () {
     controls.update();
-<<<<<<< HEAD
 
     renderer.render( scene, camera);
     requestAnimationFrame(animate);
-=======
-    // resetMaterials();
-    // hoverPieces();
-
-    renderer.render( scene, camera);
-    requestAnimationFrame(animate);
-
-    // console.log(camera.rotation);
->>>>>>> parent of 44b6c2b (Add files via upload)
 }
 
 // //calls the animate function
@@ -260,83 +218,3 @@ window.addEventListener("keydown", (event) => {
     // }
     return;
 })
-<<<<<<< HEAD
-=======
-
-
-
-//LEARNED BUT UNUSED
-
-
-
-//BACKGROUND TEXTURE
-// const backgroundTexture = new THREE.TextureLoader().load("Images/Spain/Cocktails.jpg");
-
-// CUBEMAP
-// const backgroundTexture = new THREE.CubeTextureLoader()
-//     .load([
-//         'Images/Solid_Black.png',
-//         'Images/Solid_Black.png',
-//         'Images/Solid_Black.png',
-//         'Images/Solid_Black.png',
-//         'Images/Solid_Black.png',
-//         'Images/Solid_Black.png'    
-//     ]);
-
-//     scene.background = backgroundTexture;
-
-
-// //HELPERS
-    
-    // const gridHelper = new THREE.GridHelper(200, 50)
-    // scene.add(lightHelper, lightHelper2, gridHelper)
-
-
-//STARS
-
-    // function addStar(){
-    //     const geometry = new THREE.SphereGeometry(0.25, 24, 24);
-    //     const material = new THREE.MeshStandardMaterial( {color: 0xffffff})
-    //     const star = new THREE.Mesh( geometry, material);
-
-    //     const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread( 100 ) ); 
-        
-    //     star.position.set(x, y, z);
-    //     scene.add(star)
-    // }
-
-    // Array(200).fill().forEach(addStar)
-
-
-//defines the animate function (make the donut spin)
-
- // (X, Y, Z)
-        // X > 0 moves objects to the right
-        // X < 0 moves objects to the left
-        // Y > 0 moves objects up
-        // Y < 0 moves objects down
-        // Z > 0 moves objects closer
-        // Z < 0 moves objects further
-
-
-// RAYCASTER CHECK
-    // checks to see if the mouse is over an object and makes the object transparent
-    // function hoverPieces() {
-
-    //     //update the picking ray with the camera and pointer position
-    //     raycaster.setFromCamera ( mouse, camera);
-
-    //     //calculate objects intersecting the picking ray
-    //     const intersects = raycaster.intersectObjects(scene.children);
-
-    //     for( let i = 0; i < intersects.length; i++) {
-    //         intersects[i].object.material.transparent = true;
-    //         intersects[i].object.material.opacity = 0.5;
-    //         }
-            
-    //     }
-
-    // window.addEventListener( 'pointermove', onPointerMove);
-    // window.addEventListener('click', onClick)
-    // window.requestAnimationFrame ( animate );
->>>>>>> parent of 44b6c2b (Add files via upload)
