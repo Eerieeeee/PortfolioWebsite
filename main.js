@@ -2,12 +2,9 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
-// import mp4 from './background.mp4';
-
-var scene, camera, cameraP, cameraF, renderer, controls, mouse, raycaster, selectedPiece = null;
+var scene, camera, renderer, controls, mouse, raycaster, selectedPiece = null;
 
 // SETUP
-
 //creates a scene from Three.js that allows for a camera, renderer and geometry to be created and animated
 scene = new THREE.Scene();
 
@@ -15,8 +12,6 @@ scene = new THREE.Scene();
 camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000000);
 
 const loadingManager = new THREE.LoadingManager();
-
-
 
 var display = document.querySelector('.controls-container').style.display;
 const controlsContainer = document.querySelector('.controls-container');
@@ -40,11 +35,8 @@ loadingManager.onLoad = function() {
     progressBarContainer.style.display = 'none';
     setTimeout(() => {
         controlsContainer.style.display = 'none';
-    }, 6000);  
+    }, 60);  
     }
-
-
-
 
 // setup Raycast
 // raycaster = new THREE.Raycaster();
@@ -100,7 +92,7 @@ renderer.toneMappingExposure = 1;
 
 
     modelLoader.load(
-        'Models/Homepage_007.glb',
+        './Models/Homepage_007.glb',
         
         function(gltf) {
             scene.add( gltf.scene );
