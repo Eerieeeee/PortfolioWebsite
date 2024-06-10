@@ -71,7 +71,7 @@ renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1;
 
     modelLoader.load(
-        './Homepage.glb',
+        '/Homepage.glb',
         
         function(gltf) {
             scene.add( gltf.scene );
@@ -92,7 +92,7 @@ renderer.toneMappingExposure = 1;
 // ADDING VIDEO TEXTURE TO PLANE
 const video = document.getElementById('TV-Texture'); //define video as a const
 
-video.src="Videos/TV-Texture.mp4";
+video.src="/TV-Texture.mp4";
 video.load();
 video.play();
 const texture = new THREE.VideoTexture(video); //call the var video as a texture
@@ -114,7 +114,7 @@ scene.add(imageObject);
 // //FOOD COLLAGE VIDEO
 const foodVideo = document.getElementById('FoodCollage'); //define video as a const
 
-foodVideo.src="Videos/FoodCollage.mp4";
+foodVideo.src="/FoodCollage.mp4";
 foodVideo.load();
 foodVideo.play();
 const foodTexture = new THREE.VideoTexture(foodVideo); //call the var video as a texture
