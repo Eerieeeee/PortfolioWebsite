@@ -72,7 +72,7 @@ renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1;
 
     modelLoader.load(
-        '/Homepage.glb',
+        '/public/Homepage.glb',
         
         function(gltf) {
             scene.add( gltf.scene );
